@@ -1,0 +1,80 @@
+%\documentclass[11pt,a4paper]{scrartcl}
+\documentclass{MSM_latex}
+\author{I. Musterfrau, T. Mustermann}
+
+
+\makeatletter
+\let\runauthor\@author
+\let\rundate\@date
+% Fußzeile
+\lfoot{\textit{\runauthor} \\ \textit{\rundate}}
+
+
+
+
+\begin{document}
+\section*{Weihnachtsprojekt: Simulation und Regelung eines Knickarmroboters}
+
+% following notes can be excluded for the actual documentation
+\textit{Guidelines:} Die Ergebnisse des Weihnachtsprojekts sollten mit Hilfe der vorgegebenen Vorlage  visualisiert und diskutiert werden. 
+Der Bericht sollte dabei eine maximale Länge von acht Seiten nicht überschreiten, die Aufgabenstellung wird hierbei nicht erneut aufgeführt. 
+Zur Darstellung und Diskussion können die angehängten Tabellen- und Abbildungsvorlagen verwendet werden, siehe Tab.~\ref{tab:DH} sowie Abb.~\ref{fig:Roboter} und~\ref{fig:plot_example}. 
+Etwaige Literatur sollte sauber referenziert werden, z.B. mittels Bibtex~\cite{FehrSchmidSchneiderEberhard20,Fuchs23, DenavitHartenberg55,Lipkin05}.
+
+\textit{Software Guidelines:}
+Zusätzlich zur Dokumentation sollen die Simulationsdateien abgegeben werden.
+Es ist auf eine ausreichende Kommentierung der Skripte und Funktionen zu achten, numerische Parameter sollen mittels eines Initialisierungsskripts eingebunden werden.
+
+\textit{Gruppenarbeit:}
+Es bietet sich an Simulations- und Dokumentationsdateien mit Hilfe von Versionskontrolle gemeinsam zu verwalten, beispielsweise durch den Github-Server der Universität Stuttgart, siehe \href{https://www.tik.uni-stuttgart.de/dienste-a-z/Git-Hosting/}{TIK GitHub}.
+
+% actual documentation starting ...
+%\setcounter{section}{0}
+%\section{Modifizierte DH-Parameter und Vorwärtskinematik}
+
+
+
+\clearpage
+%\subsection*{Vorlagen}
+\begin{table}[tb]
+	\centering
+	\begin{tabular}{lccccr}
+		\toprule
+		Achse & $a_{i-1}$ & $\alpha_{i-1}$ & $d_i$ & $\theta_i$ & Art \\
+		\midrule
+		1 & & & & &  \\
+		2 & & & & &  \\
+		3 & & & & &  \\
+		\bottomrule
+	\end{tabular}
+	\caption{Beispielhafte DH-Parameter.}
+	\label{tab:DH}
+\end{table}
+
+\begin{figure}[t]
+	\centering
+	\includegraphics[height=7cm]{img/Versuchsaufbau.png}
+	%	\includegraphics[height=7cm]{img/Zeichnung/Zeichnung.pdf}
+	\hspace{1cm}
+	\def\svgwidth{5.5cm}
+	\input{img/Zeichnung/Zeichnung.pdf_tex}
+	\caption{Foto sowie schematische Darstellung des zu untersuchenden Roboters~\cite{Fuchs23}.}
+	\label{fig:Roboter}
+\end{figure}
+
+\def\myLineWidth{1.5pt}
+
+% may define colors in advance, e.g., if they should be the same throughout the article
+\definecolor{mycolor1}{cmyk}{100,70,0,0}%
+\definecolor{mycolor2}{RGB}{255, 68, 76}% 
+\begin{figure}[t]
+	\centering
+	\input{img/plots/standard_figure.tex}
+	\caption{Beispielhafter Plot}
+	\label{fig:plot_example}
+\end{figure}
+
+\bibliographystyle{itm_phd_deu}
+\bibliography{literature.bib}
+
+\end{document}

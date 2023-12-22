@@ -1,0 +1,54 @@
+% Minimal example for a TikZ plot
+
+% 1) begin the overall picture
+\begin{tikzpicture} 
+    % 2) begin the axis
+    \begin{axis}[%
+        % 2a) define the properties of the axis
+        width=\textwidth,   % width of the plot
+        height= 5cm,       % height of the plot
+        xmajorgrids,        % grid on
+        xmin = -1,
+        xmax = 11,
+        ymajorgrids,
+        ylabel={Auslenkung $\unit[y]{(m)}$},  % axis label (unit needs units-package)
+        xlabel={Zeit $\unit[t]{(s)}$}
+        ]
+        
+        % further may necessary setting:
+%        xtick={0.5*pi, pi, 1.5*pi, 2*pi},   % modified xtick positions
+%        xticklabels={$\pi/2$,$\pi$,$\nicefrac{3\pi}{2}$,$2\pi$},              % labels at previously set positions
+%        ytick={-1,0,1},                 % analogous to x-ticks
+%        yticklabels={-$\hat{y}$,0,$\hat{y}$}, 
+
+%        ylabel={displacement $\unit[y]{(m)}$},  % axis label
+%        % define legend
+%        legend style={
+%        	draw=black, % color of the border
+%        	at={(0.5,1.05)}, % position plot has normalized wodth and length of 1
+%        	anchor = south, % set legend at which anchor to defined position
+%        	legend columns = 2, % legend entries in two columns
+%        	/tikz/every even column/.append style={column sep=0.5cm} % space between legend's columns
+%        }
+%        ]
+        
+        
+        % 2b) the plots itselves
+        
+        % insert data from txt-file
+        \addplot[color = mycolor1, line width = \myLineWidth] table{img/plots/data/sin_data.txt}; % define plot properties in [...]
+        \addlegendentry{$\sin$} % add legend entry
+
+        \addplot[color = mycolor2, line width = \myLineWidth, dashdotted] table{img/plots/data/cos_data.txt}; % insert data from txt-file
+        \addlegendentry{$\cos$} % add legend entry
+        
+        % manual plot
+        \addplot[color = black, line width = 2.0, opacity = 0.5, forget plot] table[row sep=crcr] {%
+        	%
+        	-5	1\\
+        	15 1\\
+        }; 
+    
+    \end{axis}
+    
+\end{tikzpicture}%
