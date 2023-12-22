@@ -42,15 +42,22 @@ Eindeutig lösbar wenn $\det(A) \neq 0$ wir also nicht unendlich schnell sein wo
 $$ \begin{align} M(y,t) \cdot \ddot{y} + k(y,\dot{y},t) = f_{ally}(y,\dot{y}, t) + B(y) \cdot u \end{align} $$
 
 End-Effektor Position
-$$p^{EF} = p^{EF}(y)
+$$p^{EF} = p^{EF}(y)$$
 
 Sollbahn
-$$p_
+$$p_D^{EF}$$
+2 mal stetig differenzierbar
 
 System ist voll aktuiert
+$y, u, p^{EF} \in \mathbb{R}^f$
 
 
-## Inverse Kinematik
+## 2.1 Inverse Kinematik
 
-$$p_d^{EF}(yd) = p d^{EF} \to yd = p^{EF^{-1}}(p d^{EF})
+$$p_d^{EF}(yd) = p d^{EF} \to yd = p^{EF^{-1}}(p d^{EF})$$
+
+
+### 2.2 Vorsteuerung, Feedforward Control
+
+### 2.3 Rückführender Regler (Feedback Control)
 
