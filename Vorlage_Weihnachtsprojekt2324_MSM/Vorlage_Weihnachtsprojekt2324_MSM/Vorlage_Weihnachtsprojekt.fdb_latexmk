@@ -1,14 +1,14 @@
 # Fdb version 3
-["bibtex Vorlage_Weihnachtsprojekt"] 1704544810 "Vorlage_Weihnachtsprojekt.aux" "Vorlage_Weihnachtsprojekt.bbl" "Vorlage_Weihnachtsprojekt" 1704544878
+["bibtex Vorlage_Weihnachtsprojekt"] 1704545631 "Vorlage_Weihnachtsprojekt.aux" "Vorlage_Weihnachtsprojekt.bbl" "Vorlage_Weihnachtsprojekt" 1704545935
   "./itm_phd_deu.bst" 1704539481 35919 e092be5423fb69f89719eba81a4a0fd3 ""
-  "Vorlage_Weihnachtsprojekt.aux" 1704544878 2776 9f0f41c5875660891868cd3969c14379 "pdflatex"
+  "Vorlage_Weihnachtsprojekt.aux" 1704545935 2776 9f0f41c5875660891868cd3969c14379 "pdflatex"
   "literature.bib" 1704539481 1282 14cbd217a12f0c9187d4ca4812180171 ""
   (generated)
   "Vorlage_Weihnachtsprojekt.bbl"
   "Vorlage_Weihnachtsprojekt.blg"
-["pdflatex"] 1704544877 "/home/jonat/Documents/01_Studium/Weihnachtsprojekt-Mechatronik/Vorlage_Weihnachtsprojekt2324_MSM/Vorlage_Weihnachtsprojekt2324_MSM/Vorlage_Weihnachtsprojekt.tex" "Vorlage_Weihnachtsprojekt.pdf" "Vorlage_Weihnachtsprojekt" 1704544878
+["pdflatex"] 1704545933 "/home/jonat/Documents/01_Studium/Weihnachtsprojekt-Mechatronik/Vorlage_Weihnachtsprojekt2324_MSM/Vorlage_Weihnachtsprojekt2324_MSM/Vorlage_Weihnachtsprojekt.tex" "Vorlage_Weihnachtsprojekt.pdf" "Vorlage_Weihnachtsprojekt" 1704545935
   "/etc/texmf/web2c/texmf.cnf" 1699144564 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/jonat/Documents/01_Studium/Weihnachtsprojekt-Mechatronik/Vorlage_Weihnachtsprojekt2324_MSM/Vorlage_Weihnachtsprojekt2324_MSM/Vorlage_Weihnachtsprojekt.tex" 1704544876 6192 ad22b7e6b25ab1b2f3bc677698b73cb7 ""
+  "/home/jonat/Documents/01_Studium/Weihnachtsprojekt-Mechatronik/Vorlage_Weihnachtsprojekt2324_MSM/Vorlage_Weihnachtsprojekt2324_MSM/Vorlage_Weihnachtsprojekt.tex" 1704545933 6705 338872b4ec384f883a55de72911dd83e ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1136768653 1536 06717a2b50de47d4087ac0e6cd759455 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1246382020 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -272,10 +272,10 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1704265399 165012 f177baa1c39a3ebd62c3096a43521a0d ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1704287021 1880727 a00f230e126ea1c5e9885041632fd405 ""
   "MSM_latex.cls" 1704539481 1867 50bc778bdd1f9d5e721f29d10b1bb368 ""
-  "Vorlage_Weihnachtsprojekt.aux" 1704544878 2776 9f0f41c5875660891868cd3969c14379 "pdflatex"
-  "Vorlage_Weihnachtsprojekt.bbl" 1704544810 1012 a06bd932ff836f921d49911bb6b7475e "bibtex Vorlage_Weihnachtsprojekt"
-  "Vorlage_Weihnachtsprojekt.out" 1704544877 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "Vorlage_Weihnachtsprojekt.tex" 1704544876 6192 ad22b7e6b25ab1b2f3bc677698b73cb7 ""
+  "Vorlage_Weihnachtsprojekt.aux" 1704545935 2776 9f0f41c5875660891868cd3969c14379 "pdflatex"
+  "Vorlage_Weihnachtsprojekt.bbl" 1704545631 1012 a06bd932ff836f921d49911bb6b7475e "bibtex Vorlage_Weihnachtsprojekt"
+  "Vorlage_Weihnachtsprojekt.out" 1704545934 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "Vorlage_Weihnachtsprojekt.tex" 1704545933 6705 338872b4ec384f883a55de72911dd83e ""
   "img/Versuchsaufbau.png" 1704539481 4098605 d1ffd19f7ee29eac241d96cf2a311b4a ""
   "img/Zeichnung/Zeichnung.pdf" 1704539481 3165 cb05cad2d19b3a6f3465d230d2301fb4 ""
   "img/Zeichnung/Zeichnung.pdf_tex" 1704539481 3939 51df08c628a105bec130577404fe6139 ""

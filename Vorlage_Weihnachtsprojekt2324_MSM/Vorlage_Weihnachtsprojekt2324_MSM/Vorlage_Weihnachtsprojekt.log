@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.1.3)  6 JAN 2024 13:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.1.3)  6 JAN 2024 13:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -911,7 +911,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <img/itmlogo.pdf, id=8, 240.9pt x 276.03125pt>
 File: img/itmlogo.pdf Graphic file (type pdf)
 <use img/itmlogo.pdf>
-Package pdftex.def Info: img/itmlogo.pdf  used on input line 107.
+Package pdftex.def Info: img/itmlogo.pdf  used on input line 105.
 (pdftex.def)             Requested size: 22.34538pt x 25.6073pt.
 
 
@@ -924,7 +924,7 @@ Package fancyhdr Warning: \footskip is too small (10.0pt):
  <./img/itmlogo.pdf>]
 File: img/itmlogo.pdf Graphic file (type pdf)
 <use img/itmlogo.pdf>
-Package pdftex.def Info: img/itmlogo.pdf  used on input line 124.
+Package pdftex.def Info: img/itmlogo.pdf  used on input line 131.
 (pdftex.def)             Requested size: 22.34538pt x 25.6073pt.
 
 
@@ -935,7 +935,7 @@ Package fancyhdr Warning: \footskip is too small (10.0pt):
 [2]
 File: img/itmlogo.pdf Graphic file (type pdf)
 <use img/itmlogo.pdf>
-Package pdftex.def Info: img/itmlogo.pdf  used on input line 149.
+Package pdftex.def Info: img/itmlogo.pdf  used on input line 156.
 (pdftex.def)             Requested size: 22.34538pt x 25.6073pt.
 
 
@@ -947,7 +947,7 @@ Package fancyhdr Warning: \footskip is too small (10.0pt):
 <img/Versuchsaufbau.png, id=57, 3011.25pt x 4015.0pt>
 File: img/Versuchsaufbau.png Graphic file (type png)
 <use img/Versuchsaufbau.png>
-Package pdftex.def Info: img/Versuchsaufbau.png  used on input line 155.
+Package pdftex.def Info: img/Versuchsaufbau.png  used on input line 162.
 (pdftex.def)             Requested size: 149.37666pt x 199.16928pt.
  (./img/Zeichnung/Zeichnung.pdf_tex
 <img/Zeichnung/Zeichnung.pdf, id=58, page=1, 170.71654pt x 241.84843pt>
@@ -959,14 +959,14 @@ Package pdftex.def Info: img/Zeichnung/Zeichnung.pdf , page1 used on input line 
 PGFPlots: reading {img/plots/data/sin_data.txt}
 PGFPlots: reading {img/plots/data/cos_data.txt}
 )
-Overfull \hbox (8.24742pt too wide) in paragraph at lines 54--172
+Overfull \hbox (8.24742pt too wide) in paragraph at lines 54--179
  [][] 
  []
 
 (./Vorlage_Weihnachtsprojekt.bbl)
 File: img/itmlogo.pdf Graphic file (type pdf)
 <use img/itmlogo.pdf>
-Package pdftex.def Info: img/itmlogo.pdf  used on input line 179.
+Package pdftex.def Info: img/itmlogo.pdf  used on input line 186.
 (pdftex.def)             Requested size: 22.34538pt x 25.6073pt.
 
 
@@ -983,13 +983,13 @@ Package rerunfilecheck Info: File `Vorlage_Weihnachtsprojekt.out' has not change
 Here is how much of TeX's memory you used:
  39744 strings out of 480121
  934179 string characters out of 5892161
- 1833451 words of memory out of 5000000
+ 1834451 words of memory out of 5000000
  57007 multiletter control sequences out of 15000+600000
  478523 words of font info for 61 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  122i,19n,120p,10797b,2181s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on Vorlage_Weihnachtsprojekt.pdf (4 pages, 6622152 bytes).
+Output written on Vorlage_Weihnachtsprojekt.pdf (4 pages, 6624005 bytes).
 PDF statistics:
  120 PDF objects out of 1000 (max. 8388607)
  89 compressed objects within 1 object stream
