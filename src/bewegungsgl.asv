@@ -87,36 +87,27 @@ for k = 1:2
     end
 end
 
+%% Testing
 
+M_0 = vpa(subs(M, alpha, 1));
+M_0 = vpa(subs(M_0, beta, 0.2));
+M_0 = vpa(subs(M_0, alpha_dot, 0));
+M_0 = vpa(subs(M_0, beta_dot, 1));
+issymmetric(double(M_0));
+
+vpa(subs(g, [alpha, beta], [0, 1]));
 
 %% Assembling
 
 syms u
-symbolic_y_ddot = simplify(M\(Q + u - D*y_punkt - g));
+symbolic_y = simplify(M\(Q + u - D*y_punkt - g))
 
 
 
-%% Testing
 
-% M_0 = vpa(subs(M, alpha, 1));
-% M_0 = vpa(subs(M_0, beta, 0.2));
-% M_0 = vpa(subs(M_0, alpha_dot, 0));
-% M_0 = vpa(subs(M_0, beta_dot, 1));
-% issymmetric(double(M_0));
-% 
-% vpa(subs(g, [alpha, beta], [0, 1]));
-% 
-% % symbolic_y_ddot = subs(symbolic_y_ddot, alpha, pi+0.01);
-% % symbolic_y_ddot = subs(symbolic_y_ddot, beta, 0);
-% % symbolic_y_ddot = subs(symbolic_y_ddot, alpha_dot, 0);
-% % symbolic_y_ddot = subs(symbolic_y_ddot, beta_dot, 0);
-% fsa = [pi, 0, 0, 0]
-% symbolic_y_ddot = subs(symbolic_y_ddot, [alpha, beta, alpha_dot, beta_dot], fsa)
-% symbolic_y_ddot = subs(symbolic_y_ddot, u, 0);
-% 
-% vpa(symbolic_y_ddot)
+vpa(y_ddot)
 
 
-
+% eq = M*y_pp + D*y_punkt + g == Q;
 
 
