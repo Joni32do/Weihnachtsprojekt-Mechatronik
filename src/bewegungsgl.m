@@ -2,7 +2,7 @@
 run kinematik.m
 
 %verallgemeinerte Koordinaten:
-y = [alpha; betha];
+y = [alpha; beta];
 y_punkt = diff(y,t);
 
 %% Transformationsmatrizen für Schwerpunke Ki,s:
@@ -26,7 +26,7 @@ s1 = S_1s*[0; 0; alpha];
 
 S_2s = T_1*T_2*T_2_2s;
 S_2s = S_2s(1:3, 1:3);
-s2 = S_2s*[0; 0; alpha+betha];
+s2 = S_2s*[0; 0; alpha+beta];
 
 J_r1 = jacobian(s1, y);
 J_r2 = jacobian(s2, y);
@@ -61,7 +61,7 @@ M = simplify(M);
 %% Reibmoment:
 % erste Approximation:
 Mreib_1 = 3.843e-06*diff(alpha,t);
-Mreib_2 = 3.887e-06*diff(betha,t);
+Mreib_2 = 3.887e-06*diff(beta,t);
 
 Q = [Mreib_1; Mreib_2];
 
