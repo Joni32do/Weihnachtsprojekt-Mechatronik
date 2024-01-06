@@ -1,6 +1,6 @@
 %\documentclass[11pt,a4paper]{scrartcl}
 \documentclass{MSM_latex}
-\author{I. Musterfrau, T. Mustermann}
+\author{M. Denkinger, S. Eyes, J. Schnitzler}
 
 
 \makeatletter
@@ -13,7 +13,119 @@
 
 
 \begin{document}
-\section*{Weihnachtsprojekt: Simulation und Regelung eines Knickarmroboters}
+\section{Weihnachtsprojekt: Simulation und Regelung eines Knickarmroboters}
+
+\subsection*{Aufgabe 1 - Bestimmung der Kinematik und DH-Parameter}
+
+Zur Bestimmung der Kinematik ist es notwendig herauszufinden, wie die einzelnen Gelenke des Roboters miteinander verbunden sind.
+Die Denavit-Hartenberg-Notation wird verwendet, um die 3D-Transformation zum nächsten Gelenk mithilfe von vier Parameter zu beschreiben. Im Fall des Knickarmroboters ist
+dies sehr einfach, da es sich lediglich um eine Kette von drei Gelenken handelt. Die Koordinatentransformation ist jeweils eine Rotation um die $z$-Achse mit $\theta_i$
+und eine Translation in der $xy$-Ebene, um die Länge $a_i = l_i$. Wir können somit das erste Gelenk in den Ursprung legen und mithilfe von zwei Transformationen $T_{01}$ und $T_{12}$ alles beschreiben. Die Parameter $\alpha_{i-1}$ und $d_i$ sind immer null, da eine 2D Betrachtung ausreichend wäre.
+
+
+
+Die DH-Parameter sind in Tabelle \ref{tab:DH} aufgeführt.
+
+
+
+\begin{table}[tb]
+	\centering
+	\begin{tabular}{lccccr}
+		\toprule
+		Achse & $a_{i-1}$ & $\alpha_{i-1}$ & $d_i$ & $\theta_i$ & Art \\
+		\midrule
+		1 & 0& 0& 0& $\alpha$& Rotation \\
+		2 & $l_1 = 0.16 \text{ m}$& 0& 0& 0& Translation\\
+		3 & $l_2 = 0.128 \text{ m}$& 0& 0& $\beta$& Both\\ 
+		\bottomrule
+	\end{tabular}
+	\caption{DH-Parameter des Knickarmroboters}
+	\label{tab:DH}
+\end{table}
+
+Daraus resultieren die Transformationsmatrizen
+\begin{equation*}
+	T_{02}(\alpha, l_1) = \begin{pmatrix}
+	\cos(\alpha) & -\sin(\alpha) & 0 & 0 \\
+	\sin(\alpha) & \cos(\alpha) & 0 & 0 \\
+	0 & 0 & 1 & 0 \\
+	0 & 0 & 0 & 1
+	\end{pmatrix} \cdot \begin{pmatrix}
+	1 & 0 & 0 & l_1 \\
+	0 & 1 & 0 & 0 \\
+	0 & 0 & 1 & 0 \\
+	0 & 0 & 0 & 1
+	\end{pmatrix} = \begin{pmatrix}
+	\cos(\alpha) & -\sin(\alpha) & 0 & \cos(\alpha) l_1 \\
+	\sin(\alpha) & \cos(\alpha) & 0 & \sin(\alpha) l_1 \\
+	0 & 0 & 1 & 0 \\
+	0 & 0 & 0 & 1
+	\end{pmatrix}
+\end{equation*}
+und
+\begin{equation*}
+	T_{23}(\beta, l_2) = \begin{pmatrix}
+	\cos(\beta) & -\sin(\beta) & 0 & 0 \\
+	\sin(\beta) & \cos(\beta) & 0 & 0 \\
+	0 & 0 & 1 & 0 \\
+	0 & 0 & 0 & 1
+	\end{pmatrix} \cdot \begin{pmatrix}
+	1 & 0 & 0 & l_2 \\
+	0 & 1 & 0 & 0 \\
+	0 & 0 & 1 & 0 \\
+	0 & 0 & 0 & 1
+	\end{pmatrix} = \begin{pmatrix}
+	\cos(\beta) & -\sin(\beta) & 0 & \cos(\beta) l_2 \\
+	\sin(\beta) & \cos(\beta) & 0 & \sin(\beta) l_2 \\
+	0 & 0 & 1 & 0 \\
+	0 & 0 & 0 & 1
+	\end{pmatrix}
+\end{equation*}
+
+Die Gesamttransformation ergibt sich aus der Multiplikation der beiden Matrizen, welche mithilfe von trigonometrischen Additionstheoremen vereinfacht werden kann.
+
+\begin{equation*}
+	T_{03} = T_{01} \cdot T_{12} = \begin{pmatrix}
+	\cos(\alpha + \beta) & -\sin(\alpha + \beta) & 0 & \cos(\alpha) l_1 + \cos(\alpha + \beta) l_2\\
+	\sin(\alpha + \beta) & \cos(\alpha + \beta) & 0 & \sin(\alpha) l_1 + \sin(\alpha + \beta) l_2 \\
+	0 & 0 & 1 & 0 \\
+	0 & 0 & 0 & 1
+	\end{pmatrix}
+\end{equation*}
+
+Somit ergibt sich die Position von Gelenk 2 im Weltkoordinatensystem zu
+\begin{equation*}
+	\begin{pmatrix} x_2 \\ y_2 \\ z_2 \end{pmatrix} = \begin{pmatrix}
+	\cos(\alpha) l_1\\ \sin(\alpha) l_1 \\ 0 \end{pmatrix}
+\end{equation*}
+und die Position von Gelenk 3 bzw. des Endeffektors zu
+\begin{equation*}
+	\begin{pmatrix} x_3 \\ y_3 \\ z_3 \end{pmatrix} = 
+	\begin{pmatrix}
+	\cos(\alpha) l_1 + \cos(\alpha + \beta) l_2\\ \sin(\alpha) l_1 + \sin(\alpha + \beta) l_2 \\ 0 
+	\end{pmatrix}
+\end{equation*}
+
+\subsection*{Aufgabe 2 - Bestimmung der Bewegungsgleichung}
+
+\subsubsection*{Generalisierte Koordinaten}
+Die Wahl fällt zu $q_1 = \alpha$ und $q_2 = \beta$. Die generalisierten Koordinaten sind somit die Winkel der Gelenke 2 und 3.
+
+\subsubsection*{Lagrang'sche Gleichungen}
+
+\paragraph*{Jacobi-Matrizen}
+
+
+
+\paragraph*{potentielle Energie $U$}
+
+
+
+\newpage
+
+
+\section*{Template}
+
 
 % following notes can be excluded for the actual documentation
 \textit{Guidelines:} Die Ergebnisse des Weihnachtsprojekts sollten mit Hilfe der vorgegebenen Vorlage  visualisiert und diskutiert werden. 
@@ -36,20 +148,7 @@ Es bietet sich an Simulations- und Dokumentationsdateien mit Hilfe von Versionsk
 
 \clearpage
 %\subsection*{Vorlagen}
-\begin{table}[tb]
-	\centering
-	\begin{tabular}{lccccr}
-		\toprule
-		Achse & $a_{i-1}$ & $\alpha_{i-1}$ & $d_i$ & $\theta_i$ & Art \\
-		\midrule
-		1 & & & & &  \\
-		2 & & & & &  \\
-		3 & & & & &  \\
-		\bottomrule
-	\end{tabular}
-	\caption{Beispielhafte DH-Parameter.}
-	\label{tab:DH}
-\end{table}
+
 
 \begin{figure}[t]
 	\centering

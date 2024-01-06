@@ -1,0 +1,24 @@
+\begin{thebibliography}{aber}
+
+\bibitem[DenavitHartenberg55]{DenavitHartenberg55}
+Denavit,~J.; Hartenberg,~R.S.: A kinematic notation for lower-pair mechanisms
+  based on matrices.
+\newblock Journal of Applied Mechanics, Bd.~22, Nr.~2, S.~215--221, 1955.
+
+\bibitem[FehrEtAl20]{FehrSchmidSchneiderEberhard20}
+Fehr,~J.; Schmid,~P.; Schneider,~G.; Eberhard,~P.: Modeling, Simulation and
+  Vision-/MPC-Based Control of a PowerCube Serial Robot.
+\newblock Applied Sciences, Bd.~10, Nr.~20, S.~7270, 2020.
+
+\bibitem[Fuchs23]{Fuchs23}
+Fuchs,~M.: Data-Driven Modeling of a Robotic Manipulator, 2023.
+\newblock Bachelorarbeit BSC-154, Institut f\"{u}r Technische und Numerische
+  Mechanik, Universit\"{a}t Stuttgart.
+
+\bibitem[Lipkin05]{Lipkin05}
+Lipkin,~H.: A note on Denavit-Hartenberg notation in robotics.
+\newblock In Proceedings of the International Design Engineering Technical
+  Conferences and Computers and Information in Engineering Conference,
+  S.~921--926, Long Beach, CA, USA, 2005.
+
+\end{thebibliography}

@@ -1,0 +1,47 @@
+This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Vorlage_Weihnachtsprojekt.aux
+The style file: itm_phd_deu.bst
+Database file #1: literature.bib
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+You've used 4 entries,
+            3042 wiz_defined-function locations,
+            649 strings with 5829 characters,
+and the built_in function-call counts, 2086 in all, are:
+= -- 180
+> -- 52
+< -- 6
++ -- 18
+- -- 16
+* -- 134
+:= -- 269
+add.period$ -- 8
+call.type$ -- 4
+change.case$ -- 23
+chr.to.int$ -- 4
+cite$ -- 4
+duplicate$ -- 166
+empty$ -- 167
+format.name$ -- 24
+if$ -- 445
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 33
+newline$ -- 19
+num.names$ -- 15
+pop$ -- 56
+preamble$ -- 1
+purify$ -- 28
+quote$ -- 0
+skip$ -- 90
+stack$ -- 0
+substring$ -- 116
+swap$ -- 110
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 32
+warning$ -- 0
+while$ -- 16
+width$ -- 7
+write$ -- 42
