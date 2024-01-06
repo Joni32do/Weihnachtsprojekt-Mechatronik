@@ -23,6 +23,9 @@ odefun = @(t, y) assemble_odefun(y, u, symbolic_y_ddot);
 
 [t, y] = ode45(odefun, [0, 10], y_0);
 
+
+
+
 q = [y(:, 1), y(:, 3)];
 % Animation
 figure(1);
