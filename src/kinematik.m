@@ -9,7 +9,7 @@ l2 = 0.128;
 syms theta_1 theta_2
 T_1 = dhtranssym('id','1','a',0,'alp',0,'d',0);
 T_2 = dhtranssym('id','2','a',l1,'alp',0,'d',0);
-T_3 = dhtranssym('id','2','a',l2,'alp',0,'d',0,'theta',0);
+T_3 = dhtranssym('id','3','a',l2,'alp',0,'d',0,'theta',0);
 T = T_1 * T_2 * T_3;
 
 %Theta_1 und Theta_2 mit alpha-pi/2 bzw. betha ersetzen:
