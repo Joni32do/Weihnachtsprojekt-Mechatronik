@@ -84,7 +84,7 @@ end
 D = simplify(D);
 M = simplify(M);
 
-eq = M*diff(y_punkt,t) + D*y_punkt + g == Q
+eq = M*diff(y_punkt,t) + D*y_punkt + g == Q;
 
 
 
