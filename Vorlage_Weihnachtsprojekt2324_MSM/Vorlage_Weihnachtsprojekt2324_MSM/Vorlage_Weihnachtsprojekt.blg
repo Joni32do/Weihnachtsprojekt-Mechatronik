@@ -1,9 +1,11 @@
-This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
+This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Vorlage_Weihnachtsprojekt.aux
+Reallocating 'name_of_file' (item size: 1) to 12 items.
 The style file: itm_phd_deu.bst
+Reallocating 'name_of_file' (item size: 1) to 15 items.
 Database file #1: literature.bib
-Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 You've used 4 entries,
             3042 wiz_defined-function locations,
             649 strings with 5829 characters,

@@ -14,9 +14,14 @@ alpha = sym("alpha");
 alpha_dot = sym("alpha_dot");
 beta = sym("beta");
 beta_dot = sym("beta_dot");
+u = sym("u",[2, 1]);
 
 y = [alpha; beta];
 y_punkt = [alpha_dot; beta_dot];
+
+% % Real number
+% assumeAlso(y, 'real');
+% assumeAlso(y_punkt, 'real');
 
 %% Transformationsmatrizen
 T_1 = dhtranssym('id','1','a',0,'alp',0,'d',0,'theta', alpha - pi/2);
@@ -104,7 +109,6 @@ end
 
 %% Assembling
 
-syms u
 symbolic_y_ddot = simplify(M\(Q + u - D*y_punkt - g));
 
 
