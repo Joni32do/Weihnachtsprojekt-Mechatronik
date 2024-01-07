@@ -1,7 +1,6 @@
-function dy = assemble_odefun(y, u_, symbolic_y_ddot)
+function dy = assemble_odefun(y, u_, func)
     % Only works if `symbolic_y_ddot` is loaded in workspace`
     dy = zeros(4,1);
-    func = matlabFunction(symbolic_y_ddot);
     y_ddot = func(y(1), y(2), y(3), y(4), u_);
 
     % ALTERNATIVE:

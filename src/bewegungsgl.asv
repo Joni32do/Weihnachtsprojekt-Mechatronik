@@ -1,15 +1,22 @@
 %% Bestimmung der Bewegungsgleichungen (Aufgabe 2)
+l1 = 0.16;
+l2 = 0.128;
+
 
 % This loads T1, T2, T3 which are symbolic matrices which are altered
 % by changing the value of $\alpha$ and $\beta$
 run kinematik.m
 
 %verallgemeinerte Koordinaten:
+syms alpha alpha_dot beta beta_dot
 y = [alpha; beta];
-% y_punkt = diff(y,t);
-syms alpha_dot beta_dot
 y_punkt = [alpha_dot; beta_dot];
 
+%% Transformationsmatrizen
+T_1 = dhtranssym('id','1','a',0,'alp',0,'d',0,'theta', alpha - pi/2);
+T_2 = dhtranssym('id','2','a',l1,'alp',0,'d',0, 'theta', beta);
+T_3 = dhtranssym('id','3','a',l2,'alp',0,'d',0,'theta',0);
+T_
 %% Transformationsmatrizen für Schwerpunke Ki,s:
 T_1_1s = dhtranssym('id','1','a',l1/2,'alp',0,'d',0 , 'theta',0);
 T_2_2s = dhtranssym('id','2','a',l2/2,'alp',0,'d',0 , 'theta',0);
@@ -87,27 +94,36 @@ for k = 1:2
     end
 end
 
-%% Testing
 
-M_0 = vpa(subs(M, alpha, 1));
-M_0 = vpa(subs(M_0, beta, 0.2));
-M_0 = vpa(subs(M_0, alpha_dot, 0));
-M_0 = vpa(subs(M_0, beta_dot, 1));
-issymmetric(double(M_0));
-
-vpa(subs(g, [alpha, beta], [0, 1]));
 
 %% Assembling
 
 syms u
-symbolic_y = simplify(M\(Q + u - D*y_punkt - g))
+symbolic_y_ddot = simplify(M\(Q + u - D*y_punkt - g));
 
 
 
+%% Testing
 
-vpa(y_ddot)
+% M_0 = vpa(subs(M, alpha, 1));
+% M_0 = vpa(subs(M_0, beta, 0.2));
+% M_0 = vpa(subs(M_0, alpha_dot, 0));
+% M_0 = vpa(subs(M_0, beta_dot, 1));
+% issymmetric(double(M_0));
+% 
+% vpa(subs(g, [alpha, beta], [0, 1]));
+% 
+% % symbolic_y_ddot = subs(symbolic_y_ddot, alpha, pi+0.01);
+% % symbolic_y_ddot = subs(symbolic_y_ddot, beta, 0);
+% % symbolic_y_ddot = subs(symbolic_y_ddot, alpha_dot, 0);
+% % symbolic_y_ddot = subs(symbolic_y_ddot, beta_dot, 0);
+% fsa = [pi, 0, 0, 0]
+% symbolic_y_ddot = subs(symbolic_y_ddot, [alpha, beta, alpha_dot, beta_dot], fsa)
+% symbolic_y_ddot = subs(symbolic_y_ddot, u, 0);
+% 
+% vpa(symbolic_y_ddot)
 
 
-% eq = M*y_pp + D*y_punkt + g == Q;
+
 
 

@@ -1,16 +1,29 @@
+function symbolic_y_ddot = bewegungsgl()
+
 %% Bestimmung der Bewegungsgleichungen (Aufgabe 2)
+l1 = 0.16;
+l2 = 0.128;
+
 
 % This loads T1, T2, T3 which are symbolic matrices which are altered
 % by changing the value of $\alpha$ and $\beta$
-run kinematik.m
+% run kinematik.m
 
 %verallgemeinerte Koordinaten:
+alpha = sym("alpha");
+alpha_dot = sym("alpha_dot");
+beta = sym("beta");
+beta_dot = sym("beta_dot");
+
 y = [alpha; beta];
-% y_punkt = diff(y,t);
-syms alpha_dot beta_dot
 y_punkt = [alpha_dot; beta_dot];
 
-%% Transformationsmatrizen für Schwerpunke Ki,s:
+%% Transformationsmatrizen
+T_1 = dhtranssym('id','1','a',0,'alp',0,'d',0,'theta', alpha - pi/2);
+T_2 = dhtranssym('id','2','a',l1,'alp',0,'d',0, 'theta', beta);
+T_3 = dhtranssym('id','3','a',l2,'alp',0,'d',0,'theta',0);
+
+% Transformationsmatrizen für Schwerpunke Ki,s:
 T_1_1s = dhtranssym('id','1','a',l1/2,'alp',0,'d',0 , 'theta',0);
 T_2_2s = dhtranssym('id','2','a',l2/2,'alp',0,'d',0 , 'theta',0);
 
@@ -115,7 +128,7 @@ symbolic_y_ddot = simplify(M\(Q + u - D*y_punkt - g));
 % symbolic_y_ddot = subs(symbolic_y_ddot, u, 0);
 % 
 % vpa(symbolic_y_ddot)
-
+end
 
 
 

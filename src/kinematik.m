@@ -1,5 +1,4 @@
 %% Aufgabe 1 Weihnachtsprojekt: Bestimmung der Kinematik
-
 % gegebene Werte:
 l1 = 0.16;
 l2 = 0.128;
