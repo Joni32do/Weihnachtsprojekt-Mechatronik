@@ -1,11 +1,34 @@
+function symbolic_y_ddot = bewegungsgl()
+
 %% Bestimmung der Bewegungsgleichungen (Aufgabe 2)
-run kinematik.m
+l1 = 0.16;
+l2 = 0.128;
+
+
+% This loads T1, T2, T3 which are symbolic matrices which are altered
+% by changing the value of $\alpha$ and $\beta$
+% run kinematik.m
 
 %verallgemeinerte Koordinaten:
-y = [alpha; beta];
-y_punkt = diff(y,t);
+alpha = sym("alpha");
+alpha_dot = sym("alpha_dot");
+beta = sym("beta");
+beta_dot = sym("beta_dot");
+u = sym("u", )
 
-%% Transformationsmatrizen für Schwerpunke Ki,s:
+y = [alpha; beta];
+y_punkt = [alpha_dot; beta_dot];
+
+% % Real number
+% assumeAlso(y, 'real');
+% assumeAlso(y_punkt, 'real');
+
+%% Transformationsmatrizen
+T_1 = dhtranssym('id','1','a',0,'alp',0,'d',0,'theta', alpha - pi/2);
+T_2 = dhtranssym('id','2','a',l1,'alp',0,'d',0, 'theta', beta);
+T_3 = dhtranssym('id','3','a',l2,'alp',0,'d',0,'theta',0);
+
+% Transformationsmatrizen für Schwerpunke Ki,s:
 T_1_1s = dhtranssym('id','1','a',l1/2,'alp',0,'d',0 , 'theta',0);
 T_2_2s = dhtranssym('id','2','a',l2/2,'alp',0,'d',0 , 'theta',0);
 
@@ -60,8 +83,8 @@ M = simplify(M);
 
 %% Reibmoment:
 % erste Approximation:
-Mreib_1 = 3.843e-06*diff(alpha,t);
-Mreib_2 = 3.887e-06*diff(beta,t);
+Mreib_1 = 3.843e-06* y_punkt(1);
+Mreib_2 = 3.887e-06* y_punkt(2);
 
 Q = [Mreib_1; Mreib_2];
 
@@ -73,20 +96,43 @@ g = [diff(V,y(1)); diff(V,y(2))];
 
 % Auffüllen der Matrix D mit Christoffel-Symbolen:
 D = sym('D', [2,2]);
-y_punkt_ = y_punkt(t);
+% y_punkt_ = y_punkt(t);
 
 for k = 1:2
     for j = 1:2 
-        D(k,j) = christoffel(M(t),y(t),1,k,j)* y_punkt_(1) + christoffel(M(t),y(t),2,k,j) * y_punkt_(2);
+        D(k,j) = christoffel(M,y,1,k,j)* y_punkt(1) + christoffel(M,y,2,k,j) * y_punkt(2);
         D(k,j) = simplify(D(k,j));
     end
 end
-D = simplify(D);
-M = simplify(M);
-
-eq = M*diff(y_punkt,t) + D*y_punkt + g == Q;
 
 
+
+%% Assembling
+
+symbolic_y_ddot = simplify(M\(Q + u - D*y_punkt - g));
+
+
+
+%% Testing
+
+% M_0 = vpa(subs(M, alpha, 1));
+% M_0 = vpa(subs(M_0, beta, 0.2));
+% M_0 = vpa(subs(M_0, alpha_dot, 0));
+% M_0 = vpa(subs(M_0, beta_dot, 1));
+% issymmetric(double(M_0));
+% 
+% vpa(subs(g, [alpha, beta], [0, 1]));
+% 
+% % symbolic_y_ddot = subs(symbolic_y_ddot, alpha, pi+0.01);
+% % symbolic_y_ddot = subs(symbolic_y_ddot, beta, 0);
+% % symbolic_y_ddot = subs(symbolic_y_ddot, alpha_dot, 0);
+% % symbolic_y_ddot = subs(symbolic_y_ddot, beta_dot, 0);
+% fsa = [pi, 0, 0, 0]
+% symbolic_y_ddot = subs(symbolic_y_ddot, [alpha, beta, alpha_dot, beta_dot], fsa)
+% symbolic_y_ddot = subs(symbolic_y_ddot, u, 0);
+% 
+% vpa(symbolic_y_ddot)
+end
 
 
 
