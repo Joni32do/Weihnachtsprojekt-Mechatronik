@@ -31,7 +31,7 @@ reg.r_alpha = q_end_glob(1);
 reg.r_beta = q_end_glob(2);
 
 reg.Kp = 150;
-reg.Ki = 50;
+reg.Ki = 1;
 reg.Kd = 10;
 
 
@@ -70,7 +70,7 @@ if plot_Ergebnis
     
     % Animation
     figure(1);
-    for i=1:100:size(t)
+    for i=1:1000:size(t)
         G2 = T_02(alphas(i), betas(i))*orig;
         G3 = T_03(alphas(i), betas(i))*orig;
         plot_robot(G2, G3)
@@ -78,8 +78,6 @@ if plot_Ergebnis
         plot(y_end_glob(1), y_end_glob(2), "o")
         hold off
         drawnow;
-        t(i)
-        i
         % pause(time);
     end
 end
