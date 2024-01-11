@@ -5,20 +5,47 @@ clear;
 clc;
 
 %% Anfangswerte
-% Syntax: y_0 = [alpha; alpha_dot; beta; beta_dot]
-y_0 = [pi/8; 0; 0; 0];
-u = [-0.1; 1];
+% Syntax: y_0 = [alpha; alpha_dot; beta; beta_dot, err_alpha, err_beta]
+y_0 = [pi/8; 0; 0; 0; 0; 0];
 tspan = [0, 10];
 
 opts = odeset('RelTol', 1e-4, ...
               'AbsTol', 1e-7, ...
               'MaxStep', 3*1e3);
 
-berechne_bewegungsgleichung_immer = true;
-plot_Ergebnis = false;
+%% Trajektorienplanung
+% Ziel in globalen Koordinaten
+y_end_glob = [4*sqrt(6)-4*sqrt(2)-10; ...
+             -4*sqrt(6)-4*sqrt(2)-10*sqrt(3); 0]/125;
+
+% Aus Kinematik
+pos_endeff = @(q) 4/25*[sin(q(1)) + 4/5*sin(q(1)+q(2)); ...
+    - cos(q(1)) - 4/5*cos(q(1)+q(2)); 0];
+to_endeff = @(q) pos_endeff(q) - y_end_glob;
+q0 = [0;0];
+q_end_glob = fsolve(to_endeff, q0);
+
+%% Reglerentwurf
+% regler_struct
+reg.r_alpha = q_end_glob(1);
+reg.r_beta = q_end_glob(2);
+
+reg.Kp = 150;
+reg.Ki = 50;
+reg.Kd = 10;
+
+
+% assuming x -> [alpha; alpha_dot; beta; beta_dot; err_alpha; err_beta]
+reg.pid = @(x) [-reg.Kp*(x(1)-reg.r_alpha)-reg.Ki*x(5)-reg.Kd*x(2);...
+                -reg.Kp*(x(3)-reg.r_beta)-reg.Ki*x(6)-reg.Kd*x(4)];
+
+%% Boolean Options
+
+berechne_doppelt = true;
+plot_Ergebnis = true;
 
 %% Bewegungsgleichung
-if ~exist('func_y_ddot.m', 'file') || berechne_bewegungsgleichung_immer
+if ~exist('func_y_ddot.m', 'file') || berechne_doppelt
     symbolic_y_ddot = bewegungsgl();
     matlabFunction(symbolic_y_ddot, 'file', 'func_y_ddot.m');
 end
@@ -27,7 +54,7 @@ end
 
 % Use solver ode45
 
-odefun = @(t, y) assemble_odefun(y, u, @func_y_ddot);
+odefun = @(t, y) assemble_odefun(y, @func_y_ddot, reg);
 
 [t, y] = ode45(odefun, tspan, y_0, opts);
 
@@ -43,11 +70,16 @@ if plot_Ergebnis
     
     % Animation
     figure(1);
-    for i=1:size(t)
+    for i=1:100:size(t)
         G2 = T_02(alphas(i), betas(i))*orig;
         G3 = T_03(alphas(i), betas(i))*orig;
         plot_robot(G2, G3)
+        hold on
+        plot(y_end_glob(1), y_end_glob(2), "o")
+        hold off
         drawnow;
-        pause(time);
+        t(i)
+        i
+        % pause(time);
     end
 end

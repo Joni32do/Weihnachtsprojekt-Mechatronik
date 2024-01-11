@@ -111,7 +111,7 @@ for k = 1:2
 end
 
 %% Assembling
-
+u = sym('u', [2,1]);
 symbolic_y_ddot_sym = simplify(M\(Q + u - D*y_punkt - G));
 
 %Substitution
