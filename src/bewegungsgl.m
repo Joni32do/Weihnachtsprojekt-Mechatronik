@@ -15,7 +15,7 @@ alpha = sym("alpha","real");
 alpha_dot = sym("alpha_dot","real");
 beta = sym("beta","real");
 beta_dot = sym("beta_dot","real");
-u = sym("u","real");
+
 
 y = [alpha; beta];
 y_punkt = [alpha_dot; beta_dot];
@@ -85,10 +85,13 @@ M = simplify(M);
 
 %% Reibmoment:
 % erste Approximation:
-Mreib_1 = 3.843e-06* y_punkt(1);
-Mreib_2 = 3.887e-06* y_punkt(2);
+Fs1 = 8.5e-04;                                          %aus Aufgabenblatt
+Fs2 = 3.2e-04;                                          %aus Aufgabenblatt
+Mreib_1 = 3.843e-06*y_punkt(1) + -1*sign(alpha)*Fs1;    %viskose + statische Reibung
+Mreib_2 = 3.887e-06*y_punkt(2) + -1*sign(beta)*Fs2;     %viskose + statische Reibung
 
 Q = [Mreib_1; Mreib_2];
+%Q = [Mreib_1 + u_alpha; Mreib_2 + u_beta];
 
 %% Gesamtgleichung:
 % in der Form: M(y)*y'' + D(y,y')*y' + g(y) = Reibmoment + Aktormoment
