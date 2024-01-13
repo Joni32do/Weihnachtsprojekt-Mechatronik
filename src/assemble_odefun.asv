@@ -4,15 +4,12 @@ function dy = assemble_odefun(t, y, func, reg)
     dy(5) = y(1) - reg.r_alpha(t);
     dy(6) = y(2) - reg.r_beta(t);
 
+    % limit of u values
+    u_min = -10;
+    u_max = 10;
 
     u = reg.pid(t, y);
-    
-    % limit of u values
-    % u_min = -10;
-    % u_max = 10;
-    % u = min(u_min, max(u_max, u));
-
-    % Use func
+    u = min(u_min, max(u_max, u));
     y_ddot = func(y(1), y(2), y(3), y(4), u(1), u(2));
 
     dy(1) = y(2);
