@@ -6,7 +6,7 @@ clc;
 
 %% Anfangswerte
 % Syntax: y_0 = [alpha; alpha_dot; beta; beta_dot, err_alpha, err_beta]
-y_0 = [pi/2; 0; -pi/6; 0; 0; 0];
+y_0 = [pi/2; 0; 0; 0; 0; 0];
 tspan = [0, 1];
 
 opts = odeset('RelTol', 1e-4, ...
@@ -25,25 +25,60 @@ to_endeff = @(q) pos_endeff(q) - y_end_glob;
 q_0 = [y_0(1); y_0(3)];
 q_end = fsolve(to_endeff, q_0);
 
-%% Trajektorienplanung
+%% Trajektorienplanung cubic
 
+% t_0 = tspan(1);
+% t_end = tspan(2);
+% 
+% A = [1,  t_0,   t_0^2,    t_0^3; ...
+%      0,    1,   2*t_0,  3*t_0^2; ...
+%      1,t_end, t_end^2,  t_end^3; ...
+%      0,    1, 2*t_end, 3*t_end^2];
+% % Vector of initial and final joint positions and velocities
+% a_init = [q_0(1); y_0(2); q_end(1); 0];
+% b_init = [q_0(2); y_0(4); q_end(2); 0];
+% 
+% a_coef = A\a_init;
+% b_coef = A\b_init;
+% 
+% a_poly = @(t) a_coef(1) + a_coef(2)*t + a_coef(3)*t.^2 + a_coef(4)*t.^3;
+% b_poly = @(t) b_coef(1) + b_coef(2)*t + b_coef(3)*t.^2 + b_coef(4)*t.^3;
+
+%% Trajektorienplanung quintic
 t_0 = tspan(1);
 t_end = tspan(2);
 
-A = [1,  t_0,   t_0^2,    t_0^3; ...
-     0,    1,   2*t_0,  3*t_0^2; ...
-     1,t_end, t_end^2,  t_end^3; ...
-     0,    1, 2*t_end, 3*t_end^2];
-% Vector of initial and final joint positions and velocities
-a_init = [q_0(1); y_0(2); q_end(1); 0];
-b_init = [q_0(2); y_0(4); q_end(2); 0];
+ A = [1, 0, 0, 0, 0, 0;
+         0, 1, 0, 0, 0, 0;
+         0, 0, 1, 0, 0, 0;
+         1, 1*(t_end-t_0), 1*(t_end-t_0).^2, 1*(t_end-t_0).^3, 1*(t_end-t_0).^4, 1*(t_end-t_0).^5;
+         0, 1, 2*(t_end-t_0), 3*(t_end-t_0).^2, 4*(t_end-t_0).^3, 5*(t_end-t_0).^4;
+         0, 0, 2, 6*(t_end-t_0), 12*(t_end-t_0).^2, 20*(t_end-t_0).^3];
+
+%[t_0; q_0; v_0; a_0; t_end; q_end; v_end; a_end]
+a_init = [ q_0(1); y_0(2); 0;  q_end(1); 0; 0];
+b_init = [ q_0(2); y_0(4); 0;  q_end(2); 0; 0];
 
 a_coef = A\a_init;
 b_coef = A\b_init;
 
-a_poly = @(t) a_coef(1) + a_coef(2)*t + a_coef(3)*t.^2 + a_coef(4)*t.^3;
-b_poly = @(t) b_coef(1) + b_coef(2)*t + b_coef(3)*t.^2 + b_coef(4)*t.^3;
+a_poly = @(t)  a_coef(1) + a_coef(2)*(t-t_0) + a_coef(3)*(t-t_0).^2 + a_coef(4)*(t-t_0).^3 + a_coef(5)*(t-t_0).^4 + a_coef(6)*(t-t_0).^5;
+b_poly = @(t)  b_coef(1) + b_coef(2)*(t-t_0) + b_coef(3)*(t-t_0).^2 + b_coef(4)*(t-t_0).^3 + b_coef(5)*(t-t_0).^4 + b_coef(6)*(t-t_0).^5;
 
+% ploting the trajectories
+t = t_0:(t_end-t_0)/500:t_end;   
+figure(2);
+    subplot(1,2,1);
+    plot(t,a_poly(t));
+    leg=get(legend,'String');
+    legend(leg);
+    xlabel('time [s]'); ylabel('joint angle alpah [rad]');
+        subplot(1,2,2);
+    plot(t,b_poly(t));
+    leg=get(legend,'String');
+    legend(leg);
+    xlabel('time [s]'); ylabel('joint angle beta [rad]');
+    hold on;
 %% Reglerentwurf
 % regler_struct
 reg.r_alpha = a_poly;
