@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.12.21)  15 JAN 2024 18:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.12.21)  15 JAN 2024 18:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1278,49 +1278,30 @@ File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 File: listings.cfg 2023/02/27 1.9 listings configuration
 ))
 Package: listings 2023/02/27 1.9 (Carsten Heinz)
-
-Runaway argument?
-{ backgroundcolor=\color {white}, basicstyle=\footnotesize , breaklin\ETC.
-c:/Users/jonat/Documents/01_git/Weihnachtsprojekt-Mechatronik/Vorlage_Weihnachtsprojekt2324_MSM/Vorlage_Weihnachtsprojekt2324_MSM/Weihnachtsprojekt_Denkinger_etAl.tex:41: Paragraph ended before \lstset@ was complete.
-<to be read again> 
-                   \par 
-l.41 
-     
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-c:/Users/jonat/Documents/01_git/Weihnachtsprojekt-Mechatronik/Vorlage_Weihnachtsprojekt2324_MSM/Vorlage_Weihnachtsprojekt2324_MSM/Weihnachtsprojekt_Denkinger_etAl.tex:43: Extra }, or forgotten \endgroup.
-l.43 }
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-No file Weihnachtsprojekt_Denkinger_etAl.aux.
+ (C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+) (Weihnachtsprojekt_Denkinger_etAl.aux)
 \openout1 = `Weihnachtsprojekt_Denkinger_etAl.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-(C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+ (C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count343
 \scratchdimen=\dimen331
@@ -1373,7 +1354,7 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 46.
+Package hyperref Info: Link coloring OFF on input line 43.
 \@outlinefile=\write4
 \openout4 = `Weihnachtsprojekt_Denkinger_etAl.out'.
 
@@ -1384,7 +1365,7 @@ Class scrartcl Info: loading recommended package `bookmark'.
 (scrartcl)           `bookmarkpackage=false' before \begin{document} and
 (scrartcl)           you can avoid this message adding:
 (scrartcl)             \usepackage{bookmark}
-(scrartcl)           before \begin{document} on input line 46.
+(scrartcl)           before \begin{document} on input line 43.
 (C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bookmark.sty
 Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
  (C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bkm-pdftex.def
@@ -1393,7 +1374,7 @@ File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO)
 ))
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable tick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into your preamble.
- on input line 46.
+ on input line 43.
 
 \c@lstlisting=\count350
 (A1_Trafo.tex
@@ -1423,7 +1404,7 @@ Package fancyhdr Warning: \footskip is too small (10.0pt):
  <./img/itmlogo.pdf>]) (A2_Bewegungsgleichung.tex)
 File: img/itmlogo.pdf Graphic file (type pdf)
 <use img/itmlogo.pdf>
-Package pdftex.def Info: img/itmlogo.pdf  used on input line 56.
+Package pdftex.def Info: img/itmlogo.pdf  used on input line 53.
 (pdftex.def)             Requested size: 22.34538pt x 25.6073pt.
 
 
@@ -1437,41 +1418,101 @@ LaTeX Warning: Reference `lst:ode45' on page 3 undefined on input line 7.
 
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 9.
 
-Overfull \hbox (9.05826pt too wide) in paragraph at lines 10--11
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
 LaTeX Warning: Reference `lst:symb2fun' on page 3 undefined on input line 24.
 
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 29.
 (C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
 File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 29.
 
 
 LaTeX Warning: Reference `lst:wrapper' on page 3 undefined on input line 35.
 
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 39.
+(C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/base\omlcmr.fd
+File: omlcmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <9> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 39.
 File: img/itmlogo.pdf Graphic file (type pdf)
 <use img/itmlogo.pdf>
-Package pdftex.def Info: img/itmlogo.pdf  used on input line 39.
+Package pdftex.def Info: img/itmlogo.pdf  used on input line 43.
 (pdftex.def)             Requested size: 22.34538pt x 25.6073pt.
+
 
 Package fancyhdr Warning: \footskip is too small (10.0pt): 
 (fancyhdr)                Make it at least 11.68419pt, for example:
 (fancyhdr)                \setlength{\footskip}{11.68419pt}.
 
-[3{C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-LaTeX Font Info:    Trying to load font information for OML+cmr on input line 39.
- (C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/base\omlcmr.fd
-File: omlcmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 39.
-) (A7_Visualisierung.tex
-<img/visualisierung.png, id=60, 393.8715pt x 299.31825pt>
+[3{C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]) (A7_Visualisierung.tex
+
+LaTeX Warning: Reference `fig:visualisierung' on page 4 undefined on input line 3.
+
+
+LaTeX Warning: Reference `lst:animation' on page 4 undefined on input line 3.
+
+A7_Visualisierung.tex:3: Missing $ inserted.
+<inserted text> 
+                $
+l.3 ...ugleichen. Die Funktion \texttt{plot_robot}
+                                                   erzeugt die eingefärbten...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+A7_Visualisierung.tex:3: Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.3 ...ugleichen. Die Funktion \texttt{plot_robot}
+                                                   erzeugt die eingefärbten...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 3.
+
+A7_Visualisierung.tex:3: Please use \mathaccent for accents in math mode.
+\newumlaut ...ntdimen 5\font \dimen@ \fi }\accent 
+                                                  127\fontdimen 5\font \grmn...
+l.3 ...on \texttt{plot_robot} erzeugt die eingefä
+                                                  rbten Gelenke.
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+A7_Visualisierung.tex:3: Missing { inserted.
+<to be read again> 
+                   \fontdimen 
+l.3 ...on \texttt{plot_robot} erzeugt die eingefä
+                                                  rbten Gelenke.
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+A7_Visualisierung.tex:4: Missing $ inserted.
+<inserted text> 
+                $
+l.4 
+    
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+A7_Visualisierung.tex:4: Missing } inserted.
+<inserted text> 
+                }
+l.4 
+    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+<img/visualisierung.png, id=68, 393.8715pt x 299.31825pt>
 File: img/visualisierung.png Graphic file (type png)
 <use img/visualisierung.png>
 Package pdftex.def Info: img/visualisierung.png  used on input line 7.
@@ -1481,15 +1522,14 @@ File: img/itmlogo.pdf Graphic file (type pdf)
 Package pdftex.def Info: img/itmlogo.pdf  used on input line 11.
 (pdftex.def)             Requested size: 22.34538pt x 25.6073pt.
 
-
 Package fancyhdr Warning: \footskip is too small (10.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
 (fancyhdr)                \setlength{\footskip}{13.59999pt}.
 
-[4]
+[4])
 File: img/itmlogo.pdf Graphic file (type pdf)
 <use img/itmlogo.pdf>
-Package pdftex.def Info: img/itmlogo.pdf  used on input line 40.
+Package pdftex.def Info: img/itmlogo.pdf  used on input line 61.
 (pdftex.def)             Requested size: 22.34538pt x 25.6073pt.
 
 
@@ -1497,18 +1537,7 @@ Package fancyhdr Warning: \footskip is too small (10.0pt):
 (fancyhdr)                Make it at least 11.68419pt, for example:
 (fancyhdr)                \setlength{\footskip}{11.68419pt}.
 
-[5 <./img/visualisierung.png>])
-File: img/itmlogo.pdf Graphic file (type pdf)
-<use img/itmlogo.pdf>
-Package pdftex.def Info: img/itmlogo.pdf  used on input line 64.
-(pdftex.def)             Requested size: 22.34538pt x 25.6073pt.
-
-
-Package fancyhdr Warning: \footskip is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\footskip}{13.59999pt}.
-
-[6] (Weihnachtsprojekt_Denkinger_etAl.aux)
+[5 <./img/visualisierung.png>] (Weihnachtsprojekt_Denkinger_etAl.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2020/03/25>
@@ -1531,20 +1560,20 @@ Package rerunfilecheck Info: Checksums for `Weihnachtsprojekt_Denkinger_etAl.out
  )
 (\end occurred inside a group at level 1)
 
-### semi simple group (level 1) entered at line 20 (\begingroup)
+### simple group (level 1) entered at line 3 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 40403 strings out of 474495
- 943779 string characters out of 5743934
- 1967460 words of memory out of 5000000
- 61905 multiletter control sequences out of 15000+600000
- 567842 words of font info for 71 fonts, out of 8000000 for 9000
+ 41043 strings out of 474495
+ 951340 string characters out of 5743934
+ 2051460 words of memory out of 5000000
+ 62537 multiletter control sequences out of 15000+600000
+ 568917 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 122i,18n,121p,11103b,3733s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on Weihnachtsprojekt_Denkinger_etAl.pdf (6 pages, 204097 bytes).
+ 122i,18n,121p,11103b,1988s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm0900.pfb>
+Output written on Weihnachtsprojekt_Denkinger_etAl.pdf (5 pages, 263734 bytes).
 PDF statistics:
- 209 PDF objects out of 1000 (max. 8388607)
- 88 named destinations out of 1000 (max. 500000)
+ 230 PDF objects out of 1000 (max. 8388607)
+ 87 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
