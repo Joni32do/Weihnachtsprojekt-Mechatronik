@@ -9,7 +9,35 @@
 % Fußzeile
 \lfoot{\textit{\runauthor} \\ \textit{\rundate}}
 
+% Matlab-Code
+\usepackage{listings}
+\usepackage{color}
 
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color
+  basicstyle=\footnotesize,        % size of fonts used for the code
+  breaklines=true,                 % automatic line breaking only at whitespace
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  keywordstyle=\color{blue},       % keyword style
+  stringstyle=\color{mymauve},     % string literal style
+  language=Matlab,                 % the language of the code
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % line-number style
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within string literals
+  showtabs=false,                  % show tabs within string literals adding particular underscores
+  stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  tabsize=2,                       % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
 
 
 \begin{document}
@@ -129,6 +157,8 @@ Die Wahl fällt zu $q_1 = \alpha$ und $q_2 = \beta$. Die generalisierten Koordin
 
 
 \newpage
+
+\input{A4_Simulation}
 
 
 \section*{Template}

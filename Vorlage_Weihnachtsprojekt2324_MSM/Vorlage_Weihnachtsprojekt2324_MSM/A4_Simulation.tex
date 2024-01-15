@@ -1,0 +1,24 @@
+\subsection*{Aufgabe 4 - Bewegungsgleichung in Matlab}
+
+Unsere Gruppe hat sich dafür entschieden die Bewegungsgleichung und ihre Lösung direkt in MatLab zu implementieren. Wie bereits in A2 erläutert wurde, haben wir die Symbolic Toolbox von Matlab benutzt, um die Bewegungsgleichung aufzustellen.
+
+Unser Ziel ist es nun gewesen die aufgestellte Ordinary Differential Equations (ODE) mithilfe eines Solvers wie Euler-Vorwärts zu lösen. Dafür haben wir die Funktion \texttt{ode45} benutzt, welche die ODE numerisch löst. Die Funktion \texttt{ode45} benötigt als Eingabe die ODE, die Anfangsbedingungen und den Zeitbereich, in dem die ODE gelöst werden soll. Als Ausgabe liefert die Funktion die Lösung der ODE in Form von Vektoren für die Zeit und die Lösung der ODE. 
+
+Wie vorgegeben haben wir als Optionen des Solvers \texttt{ode45} die \texttt{RelTol} auf $10^{-4}$ und \texttt{AbsTol} auf $10^{-7}$ gesetzt. Die \texttt{RelTol} gibt die relative Toleranz an, die die Lösung der ODE haben darf. Die \texttt{AbsTol} gibt die absolute Toleranz an, die die Lösung der ODE haben darf. Die Toleranzen sind wichtig, da die Lösung der ODE numerisch berechnet wird und somit nicht exakt ist. Die Toleranzen geben an, wie genau die Lösung der ODE sein muss. Außerdem haben wir eine maximale Schrittweite gesetzt mithilfe von \texttt{MaxStep} $=3\cdot 10^{-3}$. 
+
+\subsubsection[short]{Aufstellen der rechten Seite}
+
+Nun benötigen wir noch eine rechte Seite
+
+\begin{lstlisting}[caption={Aufruf der Funktion \texttt{ode45}},label={lst:ode45}]
+    % Syntax: y_0 = [alpha; alpha_dot; beta; beta_dot, err_alpha, err_beta]
+    y_0 = [pi/2; 0.5; -pi/5; -0.1; 0; 0];
+    tspan = [0, 1];
+    opts = odeset('RelTol', 1e-4, ...
+          'AbsTol', 1e-7, ...
+          'MaxStep', 3*1e3);
+    
+    [t, y] = ode45(odefun, tspan, y0, opts);
+\end{lstlisting}
+
+
