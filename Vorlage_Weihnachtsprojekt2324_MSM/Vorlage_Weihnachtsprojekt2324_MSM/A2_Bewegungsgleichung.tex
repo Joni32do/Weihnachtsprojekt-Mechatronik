@@ -1,7 +1,8 @@
 \subsection*{Aufgabe 2 - Bestimmung der Bewegungsgleichung}
 
 \subsubsection*{Generalisierte Koordinaten}
-Die Wahl fällt zu $y(1) = \alpha$ und $y(2) = \beta$. Die generalisierten Koordinaten sind somit die Winkel der Gelenke 2 und 3.
+Die Wahl fällt zu $y(1) = \alpha$ und $y(2) = \beta$. 
+Die generalisierten Koordinaten sind somit die Winkel der Gelenke 1 und 2.
 
 \subsubsection*{Lagrang'sche Gleichung 2. Art}
 Die Bewegungsgleichung des Arms kann mit folgender Gleichung beschrieben werden:
@@ -42,7 +43,7 @@ Der Graviationsvektor $g(y)$ ist definiert als
 	g(y) = \left[ 
 			\frac{\partial{V}}{\partial{y_{1}}} , 
 			\frac{\partial{V}}{\partial{y_{2}}}
-	\right]
+	\right]^{T}
 \end{equation}
 
 mit der potentiellen Energie $V$:
@@ -51,12 +52,14 @@ mit der potentiellen Energie $V$:
 \end{equation}
 nach 2.1.11 Lagrange'sche Gleichungen zweiter Art in \cite{Fehr23}.
 Die Umsetzung der genannten Gleichungen wurde mit der Symbolic Math Toolbox in Matlab implementiert.
-Gleichung (1) liefert dann jeweils eine Differentialgeichung pro generalisierte Koordinaten $y_{i}$.
+Gleichung (1) liefert dann jeweils eine Differentialgeichung pro generalisierte Koordinate $y_{i}$.
 
 
 
 \subsubsection*{Reibungsterm}
-In Gleichung (1) geht das Reibmoment der Lagerung der Arme $\tau_{Reib}$ mit ein:
+In Gleichung (1) geht das Reibmoment der Lagerung der Arme $\tau_{Reib}$ mit ein, welches aus der Überlagerung der viskosen mit der 
+statischen Reibung modelliert wird:
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.95\textwidth]{Reibung.png}
