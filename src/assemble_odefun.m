@@ -11,7 +11,7 @@ function dy = assemble_odefun(t, y, func, reg)
     u = min(u_max, max(u_min, u));
 
     % Noise in friction can also be added to u
-    noise = rel.noise_amp *2*(rand(2,1)-0.5);
+    noise = reg.noise_amp *2*(rand(2,1)-0.5);
     u = u + noise;
 
     % Use func
