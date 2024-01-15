@@ -26,8 +26,8 @@ und $T_{23}$ alles beschreiben. Um mit einem nicht gedrehten Koordinatensystem a
 Daraus resultieren die Transformationsmatrizen
 \begin{equation*}
 	T_{01}(\alpha) = \begin{pmatrix}
-	\sin(\alpha) & -\cos(\alpha) & 0 & 0 \\
-	\-cos(\alpha) & \sin(\alpha) & 0 & 0 \\
+	\sin(\alpha) & \cos(\alpha) & 0 & 0 \\
+	-\cos(\alpha) & \sin(\alpha) & 0 & 0 \\
 	0 & 0 & 1 & 0 \\
 	0 & 0 & 0 & 1
 	\end{pmatrix}
@@ -43,7 +43,7 @@ Daraus resultieren die Transformationsmatrizen
 \end{equation*}
 und
 \begin{equation*}
-	T_{23}(\beta, l_2) = \begin{pmatrix}
+	T_{23}(l_2) = \begin{pmatrix}
 	0 & 0 & 0 & l_2 \\
 	0 & 0 & 0 & 0 \\
 	0 & 0 & 1 & 0 \\
@@ -56,3 +56,4 @@ Die Gesamttransformation ergibt sich aus der Multiplikation der beiden Matrizen:
 \begin{equation*}
 	T_{03} = T_{01} \cdot T_{12} \cdot T_{23}
 \end{equation*}
+
