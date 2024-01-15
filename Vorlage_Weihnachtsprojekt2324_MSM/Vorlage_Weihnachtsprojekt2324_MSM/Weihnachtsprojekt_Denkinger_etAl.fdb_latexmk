@@ -1,5 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1705338755 "c:/Users/jonat/Documents/01_git/Weihnachtsprojekt-Mechatronik/Vorlage_Weihnachtsprojekt2324_MSM/Vorlage_Weihnachtsprojekt2324_MSM/Vorlage_Weihnachtsprojekt.tex" "Vorlage_Weihnachtsprojekt.pdf" "Vorlage_Weihnachtsprojekt" 1705338762 2
+["pdflatex"] 1705338980 "c:/Users/jonat/Documents/01_git/Weihnachtsprojekt-Mechatronik/Vorlage_Weihnachtsprojekt2324_MSM/Vorlage_Weihnachtsprojekt2324_MSM/Weihnachtsprojekt_Denkinger_etAl.tex" "Weihnachtsprojekt_Denkinger_etAl.pdf" "Weihnachtsprojekt_Denkinger_etAl" 1705338986 2
+  "A1_Trafo.tex" 1705338833 3909 69a132aa4963671a4e0df03168365ac3 ""
+  "A2_Bewegungsgleichung.tex" 1705338913 356 b417ea904f06ebb075a1900a8621bc33 ""
   "A4_Simulation.tex" 1705338102 4394 d455b2a470fbf0ed46545fbda8d7b0c4 ""
   "A7_Visualisierung.tex" 1705338656 1381 b2da65cce1fae356b67bcba9f22812bc ""
   "C:/Users/jonat/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1705000475 278015 b5ae8789d05c9394f564dcef5be6e51a ""
@@ -277,15 +279,15 @@
   "C:/Users/jonat/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "C:/Users/jonat/AppData/Local/Programs/MiKTeX/tex/latex/xpatch/xpatch.sty" 1585221260 8510 7803f78066c4f9d008405191a4b43073 ""
   "MSM_latex.cls" 1703229201 1867 50bc778bdd1f9d5e721f29d10b1bb368 ""
-  "Vorlage_Weihnachtsprojekt.aux" 1705338761 2441 082a3ef050dec364b9d31c6c2e4e2f09 "pdflatex"
-  "Vorlage_Weihnachtsprojekt.out" 1705338761 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "Vorlage_Weihnachtsprojekt.tex" 1705338755 6630 fa50a9bfb10274a1069be6b4d598a989 ""
-  "c:/Users/jonat/Documents/01_git/Weihnachtsprojekt-Mechatronik/Vorlage_Weihnachtsprojekt2324_MSM/Vorlage_Weihnachtsprojekt2324_MSM/Vorlage_Weihnachtsprojekt.tex" 1705338755 6630 fa50a9bfb10274a1069be6b4d598a989 ""
+  "Weihnachtsprojekt_Denkinger_etAl.aux" 1705338985 2441 bbc0d8aa32bd8fb1407f50a3dc8120b6 "pdflatex"
+  "Weihnachtsprojekt_Denkinger_etAl.out" 1705338985 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "Weihnachtsprojekt_Denkinger_etAl.tex" 1705338971 2420 bdd1e51a7a18f04bb003c0740ae90dcc ""
+  "c:/Users/jonat/Documents/01_git/Weihnachtsprojekt-Mechatronik/Vorlage_Weihnachtsprojekt2324_MSM/Vorlage_Weihnachtsprojekt2324_MSM/Weihnachtsprojekt_Denkinger_etAl.tex" 1705338971 2420 bdd1e51a7a18f04bb003c0740ae90dcc ""
   "img/itmlogo.pdf" 1703229202 953 0a9787ba0bb4269c413c3eafb4cfe37c ""
   "img/visualisierung.png" 1705338576 11003 5d9f2a6b7d8c4483ca4cd501fd71462e ""
   (generated)
-  "Vorlage_Weihnachtsprojekt.aux"
-  "Vorlage_Weihnachtsprojekt.log"
-  "Vorlage_Weihnachtsprojekt.out"
-  "Vorlage_Weihnachtsprojekt.pdf"
+  "Weihnachtsprojekt_Denkinger_etAl.aux"
+  "Weihnachtsprojekt_Denkinger_etAl.log"
+  "Weihnachtsprojekt_Denkinger_etAl.out"
+  "Weihnachtsprojekt_Denkinger_etAl.pdf"
   (rewritten before read)

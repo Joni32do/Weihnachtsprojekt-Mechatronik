@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.12.21)  15 JAN 2024 18:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.12.21)  15 JAN 2024 18:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/jonat/Documents/01_git/Weihnachtsprojekt-Mechatronik/Vorlage_Weihnachtsprojekt2324_MSM/Vorlage_Weihnachtsprojekt2324_MSM/Vorlage_Weihnachtsprojekt.tex
-(c:/Users/jonat/Documents/01_git/Weihnachtsprojekt-Mechatronik/Vorlage_Weihnachtsprojekt2324_MSM/Vorlage_Weihnachtsprojekt2324_MSM/Vorlage_Weihnachtsprojekt.tex
+**c:/Users/jonat/Documents/01_git/Weihnachtsprojekt-Mechatronik/Vorlage_Weihnachtsprojekt2324_MSM/Vorlage_Weihnachtsprojekt2324_MSM/Weihnachtsprojekt_Denkinger_etAl.tex
+(c:/Users/jonat/Documents/01_git/Weihnachtsprojekt-Mechatronik/Vorlage_Weihnachtsprojekt2324_MSM/Vorlage_Weihnachtsprojekt2324_MSM/Weihnachtsprojekt_Denkinger_etAl.tex
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-12-11>
 (MSM_latex.cls
@@ -1281,7 +1281,7 @@ Package: listings 2023/02/27 1.9 (Carsten Heinz)
 
 Runaway argument?
 { backgroundcolor=\color {white}, basicstyle=\footnotesize , breaklin\ETC.
-c:/Users/jonat/Documents/01_git/Weihnachtsprojekt-Mechatronik/Vorlage_Weihnachtsprojekt2324_MSM/Vorlage_Weihnachtsprojekt2324_MSM/Vorlage_Weihnachtsprojekt.tex:41: Paragraph ended before \lstset@ was complete.
+c:/Users/jonat/Documents/01_git/Weihnachtsprojekt-Mechatronik/Vorlage_Weihnachtsprojekt2324_MSM/Vorlage_Weihnachtsprojekt2324_MSM/Weihnachtsprojekt_Denkinger_etAl.tex:41: Paragraph ended before \lstset@ was complete.
 <to be read again> 
                    \par 
 l.41 
@@ -1290,7 +1290,7 @@ I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
-c:/Users/jonat/Documents/01_git/Weihnachtsprojekt-Mechatronik/Vorlage_Weihnachtsprojekt2324_MSM/Vorlage_Weihnachtsprojekt2324_MSM/Vorlage_Weihnachtsprojekt.tex:43: Extra }, or forgotten \endgroup.
+c:/Users/jonat/Documents/01_git/Weihnachtsprojekt-Mechatronik/Vorlage_Weihnachtsprojekt2324_MSM/Vorlage_Weihnachtsprojekt2324_MSM/Weihnachtsprojekt_Denkinger_etAl.tex:43: Extra }, or forgotten \endgroup.
 l.43 }
       
 I've deleted a group-closing symbol because it seems to be
@@ -1299,8 +1299,8 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-No file Vorlage_Weihnachtsprojekt.aux.
-\openout1 = `Vorlage_Weihnachtsprojekt.aux'.
+No file Weihnachtsprojekt_Denkinger_etAl.aux.
+\openout1 = `Weihnachtsprojekt_Denkinger_etAl.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
 LaTeX Font Info:    ... okay on input line 46.
@@ -1375,7 +1375,7 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 
 Package hyperref Info: Link coloring OFF on input line 46.
 \@outlinefile=\write4
-\openout4 = `Vorlage_Weihnachtsprojekt.out'.
+\openout4 = `Weihnachtsprojekt_Denkinger_etAl.out'.
 
 Class scrartcl Info: loading recommended package `bookmark'.
 (scrartcl)           Using `bookmark' together with `hyperref' is recommended,
@@ -1396,21 +1396,22 @@ Package pgfplots Warning: running in backwards compatibility mode (unsuitable ti
  on input line 46.
 
 \c@lstlisting=\count350
-LaTeX Font Info:    Trying to load font information for U+msa on input line 53.
-(C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+(A1_Trafo.tex
+LaTeX Font Info:    Trying to load font information for U+msa on input line 5.
+ (C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 53.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 5.
  (C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
-LaTeX Warning: Reference `tab:DH' on page 1 undefined on input line 54.
+LaTeX Warning: Reference `tab:DH' on page 1 undefined on input line 6.
 
 <img/itmlogo.pdf, id=6, 240.9pt x 276.03125pt>
 File: img/itmlogo.pdf Graphic file (type pdf)
 <use img/itmlogo.pdf>
-Package pdftex.def Info: img/itmlogo.pdf  used on input line 136.
+Package pdftex.def Info: img/itmlogo.pdf  used on input line 88.
 (pdftex.def)             Requested size: 22.34538pt x 25.6073pt.
 
 Package fancyhdr Warning: \footskip is too small (10.0pt): 
@@ -1419,10 +1420,10 @@ Package fancyhdr Warning: \footskip is too small (10.0pt):
 
 [1{C:/Users/jonat/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
 
- <./img/itmlogo.pdf>]
+ <./img/itmlogo.pdf>]) (A2_Bewegungsgleichung.tex)
 File: img/itmlogo.pdf Graphic file (type pdf)
 <use img/itmlogo.pdf>
-Package pdftex.def Info: img/itmlogo.pdf  used on input line 162.
+Package pdftex.def Info: img/itmlogo.pdf  used on input line 56.
 (pdftex.def)             Requested size: 22.34538pt x 25.6073pt.
 
 
@@ -1499,7 +1500,7 @@ Package fancyhdr Warning: \footskip is too small (10.0pt):
 [5 <./img/visualisierung.png>])
 File: img/itmlogo.pdf Graphic file (type pdf)
 <use img/itmlogo.pdf>
-Package pdftex.def Info: img/itmlogo.pdf  used on input line 170.
+Package pdftex.def Info: img/itmlogo.pdf  used on input line 64.
 (pdftex.def)             Requested size: 22.34538pt x 25.6073pt.
 
 
@@ -1507,7 +1508,7 @@ Package fancyhdr Warning: \footskip is too small (10.0pt):
 (fancyhdr)                Make it at least 13.59999pt, for example:
 (fancyhdr)                \setlength{\footskip}{13.59999pt}.
 
-[6] (Vorlage_Weihnachtsprojekt.aux)
+[6] (Weihnachtsprojekt_Denkinger_etAl.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2020/03/25>
@@ -1520,11 +1521,11 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 
-Package rerunfilecheck Warning: File `Vorlage_Weihnachtsprojekt.out' has changed.
+Package rerunfilecheck Warning: File `Weihnachtsprojekt_Denkinger_etAl.out' has changed.
 (rerunfilecheck)                Rerun to get outlines right
 (rerunfilecheck)                or use package `bookmark'.
 
-Package rerunfilecheck Info: Checksums for `Vorlage_Weihnachtsprojekt.out':
+Package rerunfilecheck Info: Checksums for `Weihnachtsprojekt_Denkinger_etAl.out':
 (rerunfilecheck)             Before: <no file>
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  )
@@ -1533,15 +1534,15 @@ Package rerunfilecheck Info: Checksums for `Vorlage_Weihnachtsprojekt.out':
 ### semi simple group (level 1) entered at line 20 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 40391 strings out of 474495
- 943171 string characters out of 5743934
+ 40403 strings out of 474495
+ 943779 string characters out of 5743934
  1967460 words of memory out of 5000000
- 61899 multiletter control sequences out of 15000+600000
+ 61905 multiletter control sequences out of 15000+600000
  567842 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 122i,18n,121p,11096b,3729s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 122i,18n,121p,11103b,3733s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on Vorlage_Weihnachtsprojekt.pdf (6 pages, 204097 bytes).
+Output written on Weihnachtsprojekt_Denkinger_etAl.pdf (6 pages, 204097 bytes).
 PDF statistics:
  209 PDF objects out of 1000 (max. 8388607)
  88 named destinations out of 1000 (max. 500000)

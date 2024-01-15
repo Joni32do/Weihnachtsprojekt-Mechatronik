@@ -1,7 +1,7 @@
 PWD c:\Users\jonat\Documents\01_git\Weihnachtsprojekt-Mechatronik\Vorlage_Weihnachtsprojekt2324_MSM\Vorlage_Weihnachtsprojekt2324_MSM
 INPUT C:\Users\jonat\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\jonat\Documents\01_git\Weihnachtsprojekt-Mechatronik\Vorlage_Weihnachtsprojekt2324_MSM\Vorlage_Weihnachtsprojekt2324_MSM\Vorlage_Weihnachtsprojekt.tex
-OUTPUT Vorlage_Weihnachtsprojekt.log
+INPUT c:\Users\jonat\Documents\01_git\Weihnachtsprojekt-Mechatronik\Vorlage_Weihnachtsprojekt2324_MSM\Vorlage_Weihnachtsprojekt2324_MSM\Weihnachtsprojekt_Denkinger_etAl.tex
+OUTPUT Weihnachtsprojekt_Denkinger_etAl.log
 INPUT .\MSM_latex.cls
 INPUT MSM_latex.cls
 INPUT C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex\latex\koma-script\scrartcl.cls
@@ -396,7 +396,7 @@ INPUT C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.c
 INPUT C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.cfg
 INPUT C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.cfg
 INPUT C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex\latex\graphics\color.sty
-OUTPUT Vorlage_Weihnachtsprojekt.aux
+OUTPUT Weihnachtsprojekt_Denkinger_etAl.aux
 INPUT C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -405,8 +405,8 @@ INPUT C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg\epstop
 INPUT C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
-OUTPUT Vorlage_Weihnachtsprojekt.out
-OUTPUT Vorlage_Weihnachtsprojekt.pdf
+OUTPUT Weihnachtsprojekt_Denkinger_etAl.out
+OUTPUT Weihnachtsprojekt_Denkinger_etAl.pdf
 INPUT C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex\latex\bookmark\bookmark.sty
 INPUT C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex\latex\bookmark\bookmark.sty
 INPUT C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex\latex\bookmark\bkm-pdftex.def
@@ -415,6 +415,9 @@ INPUT C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex\latex\bookmark\bkm-pdftex
 INPUT C:\Users\jonat\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmss10.tfm
 INPUT C:\Users\jonat\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmssbx10.tfm
 INPUT C:\Users\jonat\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmssbx10.tfm
+INPUT .\A1_Trafo.tex
+INPUT .\A1_Trafo.tex
+INPUT A1_Trafo.tex
 INPUT C:\Users\jonat\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmssbx10.tfm
 INPUT C:\Users\jonat\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
 INPUT C:\Users\jonat\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
@@ -455,6 +458,9 @@ INPUT .\img\itmlogo.pdf
 INPUT .\img\itmlogo.pdf
 INPUT C:\Users\jonat\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti10.tfm
 INPUT C:\Users\jonat\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT .\A2_Bewegungsgleichung.tex
+INPUT .\A2_Bewegungsgleichung.tex
+INPUT A2_Bewegungsgleichung.tex
 INPUT .\img\itmlogo.pdf
 INPUT .\img\itmlogo.pdf
 INPUT .\img\itmlogo.pdf
@@ -494,9 +500,9 @@ INPUT .\img\itmlogo.pdf
 INPUT .\img\itmlogo.pdf
 INPUT .\img\itmlogo.pdf
 INPUT .\img\itmlogo.pdf
-INPUT Vorlage_Weihnachtsprojekt.aux
-INPUT .\Vorlage_Weihnachtsprojekt.out
-INPUT .\Vorlage_Weihnachtsprojekt.out
+INPUT Weihnachtsprojekt_Denkinger_etAl.aux
+INPUT .\Weihnachtsprojekt_Denkinger_etAl.out
+INPUT .\Weihnachtsprojekt_Denkinger_etAl.out
 INPUT C:\Users\jonat\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\jonat\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\jonat\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
