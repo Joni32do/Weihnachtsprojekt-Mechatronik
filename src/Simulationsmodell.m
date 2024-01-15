@@ -4,10 +4,21 @@
 clear;
 clc;
 
+%% Boolean Options
+
+berechne_doppelt = true;
+plot_Ergebnis = true;
+
+%% Bewegungsgleichung
+if ~exist('func_y_ddot.m', 'file') || berechne_doppelt
+    symbolic_y_ddot = bewegungsgl();
+    matlabFunction(symbolic_y_ddot, 'file', 'func_y_ddot.m');
+end
+
 %% Anfangswerte
 % Syntax: y_0 = [alpha; alpha_dot; beta; beta_dot, err_alpha, err_beta]
-y_0 = [pi/2; 0; 0; 0; 0; 0];
-tspan = [0, 1];
+y_0 = [pi/2; 0.5; -pi/5; -0.1; 0; 0];
+tspan = [0, 0.1];
 
 opts = odeset('RelTol', 1e-4, ...
               'AbsTol', 1e-7, ...
@@ -93,16 +104,7 @@ reg.Kd = 10;
 reg.pid = @(t, x) [-reg.Kp*(x(1)-reg.r_alpha(t))-reg.Ki*x(5)-reg.Kd*x(2);...
                    -reg.Kp*(x(3)- reg.r_beta(t))-reg.Ki*x(6)-reg.Kd*x(4)];
 
-%% Boolean Options
 
-berechne_doppelt = true;
-plot_Ergebnis = true;
-
-%% Bewegungsgleichung
-if ~exist('func_y_ddot.m', 'file') || berechne_doppelt
-    symbolic_y_ddot = bewegungsgl();
-    matlabFunction(symbolic_y_ddot, 'file', 'func_y_ddot.m');
-end
 
 %% Bewegungsgleichung numerisch integrieren
 
@@ -124,7 +126,9 @@ if plot_Ergebnis
     
     % Animation
     figure(1);
-    n_frame = 250;
+    % plots maximal 250 frames
+    max_frame = 250;
+    n_frame = min(size(y,1), max_frame);
     for frame=1:n_frame
         i = floor(frame/n_frame .* numel(t));
         G2 = T_02(alphas(i), betas(i))*orig;
@@ -134,6 +138,7 @@ if plot_Ergebnis
         plot(y_end_glob(1), y_end_glob(2), "o")
         hold off
         drawnow;
-        % pause(time);
+        %wait such that the animation is as long as the simulated time
+        pause(time(i));
     end
 end

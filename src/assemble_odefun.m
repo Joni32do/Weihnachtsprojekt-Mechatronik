@@ -1,16 +1,13 @@
 function dy = assemble_odefun(t, y, func, reg)
+% assuming y -> [alpha; alpha_dot; beta; beta_dot; err_alpha; err_beta]
     dy = zeros(6,1);
-    % error from soll-value
-    dy(5) = y(1) - reg.r_alpha(t);
-    dy(6) = y(2) - reg.r_beta(t);
-
 
     u = reg.pid(t, y);
     
     % limit of u values
-    % u_min = -10;
-    % u_max = 10;
-    % u = min(u_min, max(u_max, u));
+    u_min = -1000;
+    u_max = 1000;
+    u = min(u_max, max(u_min, u))
 
     % Use func
     y_ddot = func(y(1), y(2), y(3), y(4), u(1), u(2));
@@ -19,6 +16,9 @@ function dy = assemble_odefun(t, y, func, reg)
     dy(2) = double(y_ddot(1));
     dy(3) = y(4);
     dy(4) = double(y_ddot(2));
+    % error from soll-value
+    dy(5) = y(1) - reg.r_alpha(t);
+    dy(6) = y(2) - reg.r_beta(t);
 end
 
 
