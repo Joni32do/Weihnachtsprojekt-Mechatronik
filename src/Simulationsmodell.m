@@ -17,7 +17,7 @@ end
 
 %% Anfangswerte
 % Syntax: y_0 = [alpha; alpha_dot; beta; beta_dot, err_alpha, err_beta]
-y_0 = [pi/2; 0.5; -pi/5; -0.1; 0; 0];
+y_0 = [pi/2; 0; -pi/5; 0; 0; 0];
 tspan = [0, 1];
 
 opts = odeset('RelTol', 1e-4, ...
