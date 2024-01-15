@@ -18,9 +18,9 @@ function dy = assemble_odefun(t, y, func, reg)
     y_ddot = func(y(1), y(2), y(3), y(4), u(1), u(2));
 
     dy(1) = y(2);
-    dy(2) = double(y_ddot(1));
+    dy(2) = y_ddot(1);
     dy(3) = y(4);
-    dy(4) = double(y_ddot(2));
+    dy(4) = y_ddot(2);
     % error from soll-value
     dy(5) = y(1) - reg.r_alpha(t);
     dy(6) = y(2) - reg.r_beta(t);

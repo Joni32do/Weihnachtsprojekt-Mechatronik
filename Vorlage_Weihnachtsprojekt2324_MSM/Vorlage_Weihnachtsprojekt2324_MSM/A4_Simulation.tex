@@ -1,14 +1,10 @@
 \subsection*{Aufgabe 4 - Bewegungsgleichung in Matlab}
 
-Unsere Gruppe hat sich dafür entschieden die Bewegungsgleichung und ihre Lösung direkt in MatLab zu implementieren. Wie bereits in A2 erläutert wurde, haben wir die Symbolic Toolbox von Matlab benutzt, um die Bewegungsgleichung aufzustellen.
+Unsere Gruppe hat sich dafür entschieden die Bewegungsgleichung und ihre Lösung direkt in MatLab zu implementieren. Wie bereits in Aufgabenteil 2 erläutert wurde, haben wir die \texttt{Symbolic Toolbox von Matlab} benutzt, um die Bewegungsgleichung aufzustellen.
 
-Unser Ziel ist es nun gewesen die aufgestellte Ordinary Differential Equations (ODE) mithilfe eines Solvers wie Euler-Vorwärts zu lösen. Dafür haben wir die Funktion \texttt{ode45} benutzt, welche die ODE numerisch löst. Die Funktion \texttt{ode45} benötigt als Eingabe die ODE, die Anfangsbedingungen und den Zeitbereich, in dem die ODE gelöst werden soll. Als Ausgabe liefert die Funktion die Lösung der ODE in Form von Vektoren für die Zeit und die Lösung der ODE. 
+Unser Ziel ist es nun gewesen die aufgestellte Ordinary Differential Equations (ODE) mithilfe eines Solvers wie Euler-Vorwärts zu lösen. Dafür haben wir die Funktion \texttt{ode45} benutzt, welche die ODE numerisch löst. Die Funktion \texttt{ode45} benötigt als Eingabe die ODE, die Anfangsbedingungen und den Zeitbereich, in dem die ODE gelöst werden soll. Als Ausgabe liefert die Funktion die Lösung der ODE.
 
-Wie vorgegeben haben wir als Optionen des Solvers \texttt{ode45} die \texttt{RelTol} auf $10^{-4}$ und \texttt{AbsTol} auf $10^{-7}$ gesetzt. Die \texttt{RelTol} gibt die relative Toleranz an, die die Lösung der ODE haben darf. Die \texttt{AbsTol} gibt die absolute Toleranz an, die die Lösung der ODE haben darf. Die Toleranzen sind wichtig, da die Lösung der ODE numerisch berechnet wird und somit nicht exakt ist. Die Toleranzen geben an, wie genau die Lösung der ODE sein muss. Außerdem haben wir eine maximale Schrittweite gesetzt mithilfe von \texttt{MaxStep} $=3\cdot 10^{-3}$. 
-
-\subsubsection[short]{Aufstellen der rechten Seite}
-
-Nun benötigen wir noch eine rechte Seite
+Wie vorgegeben haben wir als Optionen des Solvers \texttt{ode45} die \texttt{RelTol} auf $10^{-4}$ und \texttt{AbsTol} auf $10^{-7}$ gesetzt. Die \texttt{RelTol} gibt die relative Toleranz an, die die Lösung der ODE haben darf. Die \texttt{AbsTol} gibt die absolute Toleranz an, die die Lösung der ODE haben darf. Die Toleranzen sind wichtig, da die Lösung der ODE numerisch berechnet wird und somit nicht exakt ist. Die Toleranzen geben an, wie genau die Lösung der ODE sein muss. Außerdem haben wir eine maximale Schrittweite gesetzt mithilfe von \texttt{MaxStep} $=3\cdot 10^{-3}$. Das setzen dieser initiailen Werte geschieht in Listing \ref{lst:ode45}.
 
 \begin{lstlisting}[caption={Aufruf der Funktion \texttt{ode45}},label={lst:ode45}]
     % Syntax: y_0 = [alpha; alpha_dot; beta; beta_dot, err_alpha, err_beta]
@@ -20,5 +16,52 @@ Nun benötigen wir noch eine rechte Seite
     
     [t, y] = ode45(odefun, tspan, y0, opts);
 \end{lstlisting}
+
+\subsubsection*{Aufstellen der rechten Seite}
+
+Nun benötigen wir noch eine rechte Seite in der Form einer \texttt{odefun}, die abhängig ist von der Zeit und der Lösung der ODE. Die rechte Seite der ODE ist die Ableitung der Lösung der ODE. Haben wir diese können wir die ODE numerisch lösen und visualisieren. 
+
+Vorerst beschäftigen wir uns nicht mit der Implementierung des Reglers, welcher die Trajektorienplanung umsetzt, sondern schauen ganz grundlegend auf das Problem. Die Bewegungsgleichung erhalten wir als Symbolic Equation aus der von uns implementierten Funktion \texttt{bewegungsgl} und schreiben mithilfe des Befehls diese als Matlab-M-Funktion in den workspace. Aus Effizienzgründen machen wir das nur, wenn die Funktion noch nicht existiert oder wir explizit wollen, dass sie neu berechnet wird, siehe Listing: \ref{lst:symb2fun}. Zuerst hatten wir es mit \texttt{subs} probiert, aber dies ist langsamer und weniger elegant.
+
+
+\begin{lstlisting}[caption={Aufruf der Funktion \texttt{ode45}},label={lst:symb2fun}]
+    %% Bewegungsgleichung
+    if ~exist('func_y_ddot.m', 'file') || berechne_doppelt
+        symbolic_y_ddot = bewegungsgl();
+        matlabFunction(symbolic_y_ddot, 'file', 'func_y_ddot.m');
+    end
+\end{lstlisting}
+
+Nun schreiben wir einen \textit{Wrapper} für diese Funktion, da wir aus einer ODE 2. Ordnung eine ODE 1. Ordnung machen müssen. Dies geschieht in Listing \ref{lst:wrapper}. 
+
+\begin{lstlisting}[caption={Definition der rechten Seite},label={lst:wrapper}]
+function dy = assemble_odefun(t, y, func, reg)
+% assuming y -> [alpha; alpha_dot; beta; beta_dot; err_alpha; err_beta]
+    dy = zeros(6,1);
+    u = reg.pid(t, y);
+    
+    % limit u values
+    u_min = -1;
+    u_max = 1;
+    u = min(u_max, max(u_min, u));
+
+    % Noise in friction can also be added to u
+    noise = reg.noise_amp *2*(rand(2,1)-0.5);
+    u = u + noise;
+
+    % Bewegungsgleichung from symbolic toolbox
+    y_ddot = func(y(1), y(2), y(3), y(4), u(1), u(2));
+
+    dy(1) = y(2);
+    dy(2) = double(y_ddot(1));
+    dy(3) = y(4);
+    dy(4) = double(y_ddot(2));
+    % error from soll-value
+    dy(5) = y(1) - reg.r_alpha(t);
+    dy(6) = y(2) - reg.r_beta(t);
+end
+\end{lstlisting}
+
+Das wichtigste was hier passiert ist das die Ableitung des Winkels einfach die Winkelgeschwindigkeit ist, welches ein Eingabewert ist. Erst die rechte Seite der Winkelgeschwindigkeit ist dann die Bewegungsgleichung. Hier fügen wir unseren Regler hinzu und das Rauschen, welches wir in der Aufgabenstellung vorgegeben bekommen haben.
 
 
