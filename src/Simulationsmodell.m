@@ -95,6 +95,9 @@ figure(2);
 reg.r_alpha = a_poly;
 reg.r_beta = b_poly;
 
+% Noise in friction is the same as noisy u
+reg.noise_amp = 5e-3;
+
 reg.Kp = 150;
 reg.Ki = 1;
 reg.Kd = 10;

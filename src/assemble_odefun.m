@@ -4,10 +4,15 @@ function dy = assemble_odefun(t, y, func, reg)
 
     u = reg.pid(t, y);
     
-    % limit of u values
-    u_min = -1000;
-    u_max = 1000;
-    u = min(u_max, max(u_min, u))
+    % limit u values
+    u_min = -1;
+    u_max = 1;
+    
+    u = min(u_max, max(u_min, u));
+
+    % Noise in friction can also be added to u
+    noise = rel.noise_amp *2*(rand(2,1)-0.5);
+    u = u + noise;
 
     % Use func
     y_ddot = func(y(1), y(2), y(3), y(4), u(1), u(2));
