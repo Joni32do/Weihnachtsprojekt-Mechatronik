@@ -1,6 +1,6 @@
 \subsection*{Aufgabe 5 - Vorsteuerung und PID-Regler}
 
-Um die Bewegungen des Roboters zur Endposition durchführen zu können, wurde eine Vorsteuerung und zwei PID-Regler entworfen.
+Um die Bewegungen des Roboters zur Endposition durchführen zu können, wurde eine Vorsteuerung und zwei PID-Regler in Matlab entworfen.
 
 Die Vorsteuerung nutzt die in Aufgabe 3 vordefinierten Trajektorien $(a_{\text{poly}}, b_{\text{poly}})$, um die erwarteten Gelenkwinkel q(t) als Vorgabe für das System bereitzustellen. Durch die Vorsteuerung wird die geplante Trajektorie aktiv in das Regelungssystem integriert. Gleichzeitig kompensiert der PID-Regler den entstehenden Fehler zwischen der geplanten Trajektorie und der tatsächlichen Gelenkposition aufgrund von Störungen im Reibterm.
 
