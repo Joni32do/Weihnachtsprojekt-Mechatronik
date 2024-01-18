@@ -22,7 +22,7 @@ reg.pid = @(t, x) [-reg.Kp*(x(1)-reg.r_alpha(t))-reg.Ki*x(5)-reg.Kd*x(2);...
 
 Der gesamte Ausdruck gewährleistet eine präzise und stabile Verfolgung der vorgegebenen Sollwerte \( \text{reg.r\_alpha}(t) \) und \( \text{reg.r\_beta}(t) \) durch die Gelenke. Dabei tragen die verschiedenen Terme des PID-Reglers dazu bei, die Regelungseigenschaften anzupassen und auf unterschiedliche Aspekte des Regelproblems zu reagieren.
 
-Für den PID-Regler werden werte verwendet:
+Für den PID-Regler werden folgende Werte verwendet:
 \begin{verbatim}
     reg.Kp = 150;
     reg.Ki = 1;
