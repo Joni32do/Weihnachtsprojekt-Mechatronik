@@ -1,0 +1,20 @@
+\subsection*{Aufgabe 6 - Störsignal}
+
+Zur Modellierung eines Störsignals wird eine zufällige Zahl im Bereich von -1 bis 1 generiert. Diese Zufallszahl wird anschließend mit dem Faktor \( \text{reg.noise\_amp} = 5 \times 10^{-3} \) multipliziert. Dieser Vorgang wird für beide Reibungsterme unabhängig durchgeführt, da im realen Aufbau davon ausgegangen wird, dass sie nicht denselben Fehler aufweisen.
+
+\[
+\text{noise} = \text{reg.noise\_amp} \times 2 \times (\text{rand}(2,1) - 0.5)
+\]
+
+Dieser Ausdruck berechnet das Störsignal (\text{noise}) durch Multiplikation der zufälligen Zahlen im Bereich von -1 bis 1 mit dem angegebenen Faktor.
+
+
+Das Störsignal wird nun auf die Stellgröße des Reglers \(u\) addiert, da es den gleichen Einfluss auf die Bewegungsgleichung wie der Reibterm \(Q\) hat.
+
+\[ M(Q + u - D \cdot \dot{y}_{\text{punkt}} - G) \]
+
+Die Stellgröße \(u\) wird durch die Addition des Störsignals korrigiert:
+
+\[ u = u + \text{noise} \]
+
+Der PID-Regler muss dieses Störsignal ausgleichen, da die tatsächlich gefahrene Strecke von der geplanten Trajektorie abweichen wird.

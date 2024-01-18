@@ -1,0 +1,30 @@
+\subsection*{Aufgabe 5 - Vorsteuerung und PID-Regler}
+
+Um die Bewegungen des Roboters zur Endposition durchführen zu können, wurde eine Vorsteuerung und zwei PID-Regler entworfen.
+
+Die Vorsteuerung nutzt die in Aufgabe 3 vordefinierten Trajektorien $(a_{\text{poly}}, b_{\text{poly}})$, um die erwarteten Gelenkwinkel q(t) als Vorgabe für das System bereitzustellen. Durch die Vorsteuerung wird die geplante Trajektorie aktiv in das Regelungssystem integriert. Gleichzeitig kompensiert der PID-Regler den entstehenden Fehler zwischen der geplanten Trajektorie und der tatsächlichen Gelenkposition aufgrund von Störungen im Reibterm.
+
+Die Störungen im Reibterm führen zu falschen Drehmomenten an den Gelenken, was wiederum zu unerwünschten Beschleunigungen führt. Die Vorsteuerung agiert, indem sie die erwarteten Gelenkwinkel liefert und somit die gewünschte Fahrtrichtung vorgibt. Der PID-Regler wird dann verwendet, um aktiv auf Abweichungen zwischen der geplanten Trajektorie und der realen Bewegung des Systems zu reagieren.
+
+Der Regelkreis ist somit in der Lage, die Auswirkungen der Störungen im Reibterm zu minimieren, indem er das Regelungssystem in Echtzeit anpasst. Die Vorsteuerung spielt dabei eine Schlüsselrolle bei der Vorgabe der idealen Bewegung, während der PID-Regler auf tatsächliche Abweichungen reagiert und diese korrigiert. Dieses koordinierte Zusammenspiel ermöglicht eine präzise und robuste Regelung, auch in Anwesenheit von Störungen, und stellt sicher, dass die geplante Trajektorie so genau wie möglich verfolgt wird.
+
+
+Der Regler ist sowohl für \(\alpha\) als auch \(\beta\) implementiert. Die Eingangswerte umfassen die Lage, die Geschwindigkeit und den Regelabweichungsterm beider Gelenkwinkel. \(\text{Reg.Kp}\) ist der Proportionalgewichtungsfaktor, der die Stärke des proportionalen Regelterms steuert. Er beeinflusst die Regelabweichung \((x(1) - \text{reg.r\_alpha}(t))\), also die Abweichung der aktuellen Position unter der Trajektorie. \(\text{Reg.Ki}\) ist der Integralgewichtungsfaktor, der die Stärke des integralen Regelterms steuert. Dabei repräsentiert \(x(5)\) den kumulierten Fehler im Gelenkwinkel. \(\text{Reg.Kd}\) ist der Derivativgewichtungsfaktor, der die Stärke des derivativen Regelterms steuert. Dieser Term reagiert auf die Änderungsrate des Fehlers und glättet die Regelung.
+
+
+\begin{verbatim}
+
+assuming x -> [alpha; alpha_dot; beta; beta_dot; err_alpha; err_beta]
+reg.pid = @(t, x) [-reg.Kp*(x(1)-reg.r_alpha(t))-reg.Ki*x(5)-reg.Kd*x(2);...
+                   -reg.Kp*(x(3)- reg.r_beta(t))-reg.Ki*x(6)-reg.Kd*x(4)];
+\end{verbatim}
+
+
+Der gesamte Ausdruck gewährleistet eine präzise und stabile Verfolgung der vorgegebenen Sollwerte \( \text{reg.r\_alpha}(t) \) und \( \text{reg.r\_beta}(t) \) durch die Gelenke. Dabei tragen die verschiedenen Terme des PID-Reglers dazu bei, die Regelungseigenschaften anzupassen und auf unterschiedliche Aspekte des Regelproblems zu reagieren.
+
+Für den PID-Regler werden werte verwendet:
+\begin{verbatim}
+    reg.Kp = 150;
+    reg.Ki = 1;
+    reg.Kd = 10;
+\end{verbatim}
