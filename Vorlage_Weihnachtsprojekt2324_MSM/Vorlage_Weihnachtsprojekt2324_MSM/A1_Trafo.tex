@@ -8,21 +8,6 @@ und $T_{23}$ alles beschreiben. Um mit einem nicht gedrehten Koordinatensystem a
 
 
 
-\begin{table}[tb]
-	\centering
-	\begin{tabular}{lccccr}
-		\toprule
-		Achse & $a_{i-1}$ & $\alpha_{i-1}$ & $d_i$ & $\theta_i$ & Art \\
-		\midrule
-		1 & 0& 0& 0& $\alpha - pi/2 $& Rotation \\
-		2 & $l_1 = 0.16 \text{ m}$& 0& 0& $\beta$& Translation and Rotation\\
-		3 & $l_2 = 0.128 \text{ m}$& 0& 0& 0& Translation\\ 
-		\bottomrule
-	\end{tabular}
-	\caption{DH-Parameter des Knickarmroboters}
-	\label{tab:DH}
-\end{table}
-
 Daraus resultieren die Transformationsmatrizen
 \begin{equation*}
 	T_{01}(\alpha) = \begin{pmatrix}
@@ -57,3 +42,17 @@ Die Gesamttransformation ergibt sich aus der Multiplikation der beiden Matrizen:
 	T_{03} = T_{01} \cdot T_{12} \cdot T_{23}
 \end{equation*}
 
+\begin{table}[tb]
+	\centering
+	\begin{tabular}{lccccr}
+		\toprule
+		Achse & $a_{i-1}$ & $\alpha_{i-1}$ & $d_i$ & $\theta_i$ & Art \\
+		\midrule
+		1 & 0& 0& 0& $\alpha - pi/2 $& Rotation \\
+		2 & $l_1 = 0.16 \text{ m}$& 0& 0& $\beta$& Translation and Rotation\\
+		3 & $l_2 = 0.128 \text{ m}$& 0& 0& 0& Translation\\ 
+		\bottomrule
+	\end{tabular}
+	\caption{DH-Parameter des Knickarmroboters}
+	\label{tab:DH}
+\end{table}

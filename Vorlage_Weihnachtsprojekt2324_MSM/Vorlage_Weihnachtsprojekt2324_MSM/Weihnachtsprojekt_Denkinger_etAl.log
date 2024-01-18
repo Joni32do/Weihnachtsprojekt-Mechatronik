@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.12.21)  15 JAN 2024 18:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.12.21)  18 JAN 2024 22:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1355,6 +1355,7 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring OFF on input line 43.
+(Weihnachtsprojekt_Denkinger_etAl.out) (Weihnachtsprojekt_Denkinger_etAl.out)
 \@outlinefile=\write4
 \openout4 = `Weihnachtsprojekt_Denkinger_etAl.out'.
 
@@ -1366,7 +1367,7 @@ Class scrartcl Info: loading recommended package `bookmark'.
 (scrartcl)           you can avoid this message adding:
 (scrartcl)             \usepackage{bookmark}
 (scrartcl)           before \begin{document} on input line 43.
-(C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bookmark.sty
+ (C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bookmark.sty
 Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
  (C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bkm-pdftex.def
 File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO)
@@ -1385,15 +1386,13 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 5.
  (C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-
-LaTeX Warning: Reference `tab:DH' on page 1 undefined on input line 6.
-
-<img/itmlogo.pdf, id=6, 240.9pt x 276.03125pt>
+)) (A2_Bewegungsgleichung.tex
+<img/itmlogo.pdf, id=7, 240.9pt x 276.03125pt>
 File: img/itmlogo.pdf Graphic file (type pdf)
 <use img/itmlogo.pdf>
-Package pdftex.def Info: img/itmlogo.pdf  used on input line 88.
+Package pdftex.def Info: img/itmlogo.pdf  used on input line 7.
 (pdftex.def)             Requested size: 22.34538pt x 25.6073pt.
+
 
 Package fancyhdr Warning: \footskip is too small (10.0pt): 
 (fancyhdr)                Make it at least 11.68419pt, for example:
@@ -1401,7 +1400,50 @@ Package fancyhdr Warning: \footskip is too small (10.0pt):
 
 [1{C:/Users/jonat/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
 
- <./img/itmlogo.pdf>]) (A2_Bewegungsgleichung.tex)
+ <./img/itmlogo.pdf>]
+
+LaTeX Warning: Citation `Fehr23' on page 2 undefined on input line 53.
+
+<Reibung.png, id=28, 540.21825pt x 67.452pt>
+File: Reibung.png Graphic file (type png)
+<use Reibung.png>
+Package pdftex.def Info: Reibung.png  used on input line 65.
+(pdftex.def)             Requested size: 459.51054pt x 57.37769pt.
+File: img/itmlogo.pdf Graphic file (type pdf)
+<use img/itmlogo.pdf>
+Package pdftex.def Info: img/itmlogo.pdf  used on input line 67.
+(pdftex.def)             Requested size: 22.34538pt x 25.6073pt.
+
+Package fancyhdr Warning: \footskip is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\footskip}{13.59999pt}.
+
+[2]) (A3_Trajektorienplanung.tex
+Overfull \hbox (10.69028pt too wide) in paragraph at lines 31--31
+[]                 \OT1/cmtt/m/n/10.95 + a_coef(4)*(t-t_0).^3 + a_coef(5)*(t-t_0).^4 + a_coef(6)*(t-t_0).^5;[] 
+ []
+
+
+Overfull \hbox (10.69028pt too wide) in paragraph at lines 31--31
+[]                 \OT1/cmtt/m/n/10.95 + b_coef(4)*(t-t_0).^3 + b_coef(5)*(t-t_0).^4 + b_coef(6)*(t-t_0).^5;[] 
+ []
+
+File: img/itmlogo.pdf Graphic file (type pdf)
+<use img/itmlogo.pdf>
+Package pdftex.def Info: img/itmlogo.pdf  used on input line 34.
+(pdftex.def)             Requested size: 22.34538pt x 25.6073pt.
+
+Package fancyhdr Warning: \footskip is too small (10.0pt): 
+(fancyhdr)                Make it at least 11.68419pt, for example:
+(fancyhdr)                \setlength{\footskip}{11.68419pt}.
+
+[3 <./Reibung.png>]
+<Trajektorie.png, id=54, 421.575pt x 316.0608pt>
+File: Trajektorie.png Graphic file (type png)
+<use Trajektorie.png>
+Package pdftex.def Info: Trajektorie.png  used on input line 66.
+(pdftex.def)             Requested size: 290.22107pt x 217.58545pt.
+)
 File: img/itmlogo.pdf Graphic file (type pdf)
 <use img/itmlogo.pdf>
 Package pdftex.def Info: img/itmlogo.pdf  used on input line 53.
@@ -1412,26 +1454,16 @@ Package fancyhdr Warning: \footskip is too small (10.0pt):
 (fancyhdr)                Make it at least 13.59999pt, for example:
 (fancyhdr)                \setlength{\footskip}{13.59999pt}.
 
-[2] (A4_Simulation.tex
-
-LaTeX Warning: Reference `lst:ode45' on page 3 undefined on input line 7.
-
+[4 <./Trajektorie.png (PNG copy)>] (A4_Simulation.tex
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 9.
-
-LaTeX Warning: Reference `lst:symb2fun' on page 3 undefined on input line 24.
-
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 29.
-(C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
+ (C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
 File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 29.
-
-
-LaTeX Warning: Reference `lst:wrapper' on page 3 undefined on input line 35.
-
 LaTeX Font Info:    Trying to load font information for OML+cmr on input line 39.
-(C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/base\omlcmr.fd
+ (C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/base\omlcmr.fd
 File: omlcmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <9> not available
@@ -1446,90 +1478,21 @@ Package fancyhdr Warning: \footskip is too small (10.0pt):
 (fancyhdr)                Make it at least 11.68419pt, for example:
 (fancyhdr)                \setlength{\footskip}{11.68419pt}.
 
-[3{C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]) (A7_Visualisierung.tex
-
-LaTeX Warning: Reference `fig:visualisierung' on page 4 undefined on input line 3.
-
-
-LaTeX Warning: Reference `lst:animation' on page 4 undefined on input line 3.
-
-A7_Visualisierung.tex:3: Missing $ inserted.
-<inserted text> 
-                $
-l.3 ...ugleichen. Die Funktion \texttt{plot_robot}
-                                                   erzeugt die eingefärbten...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-A7_Visualisierung.tex:3: Extra }, or forgotten $.
-<recently read> \egroup 
-                        
-l.3 ...ugleichen. Die Funktion \texttt{plot_robot}
-                                                   erzeugt die eingefärbten...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-
-LaTeX Warning: Command \" invalid in math mode on input line 3.
-
-A7_Visualisierung.tex:3: Please use \mathaccent for accents in math mode.
-\newumlaut ...ntdimen 5\font \dimen@ \fi }\accent 
-                                                  127\fontdimen 5\font \grmn...
-l.3 ...on \texttt{plot_robot} erzeugt die eingefä
-                                                  rbten Gelenke.
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-A7_Visualisierung.tex:3: Missing { inserted.
-<to be read again> 
-                   \fontdimen 
-l.3 ...on \texttt{plot_robot} erzeugt die eingefä
-                                                  rbten Gelenke.
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-A7_Visualisierung.tex:4: Missing $ inserted.
-<inserted text> 
-                $
-l.4 
-    
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-A7_Visualisierung.tex:4: Missing } inserted.
-<inserted text> 
-                }
-l.4 
-    
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-<img/visualisierung.png, id=68, 393.8715pt x 299.31825pt>
-File: img/visualisierung.png Graphic file (type png)
-<use img/visualisierung.png>
-Package pdftex.def Info: img/visualisierung.png  used on input line 7.
-(pdftex.def)             Requested size: 386.95897pt x 294.08348pt.
+[5{C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]) (A5_PID-Regler.tex
 File: img/itmlogo.pdf Graphic file (type pdf)
 <use img/itmlogo.pdf>
-Package pdftex.def Info: img/itmlogo.pdf  used on input line 11.
+Package pdftex.def Info: img/itmlogo.pdf  used on input line 13.
 (pdftex.def)             Requested size: 22.34538pt x 25.6073pt.
+
 
 Package fancyhdr Warning: \footskip is too small (10.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
 (fancyhdr)                \setlength{\footskip}{13.59999pt}.
 
-[4])
+[6]) (A6_Stoersignal.tex) (A7_Visualisierung.tex
 File: img/itmlogo.pdf Graphic file (type pdf)
 <use img/itmlogo.pdf>
-Package pdftex.def Info: img/itmlogo.pdf  used on input line 61.
+Package pdftex.def Info: img/itmlogo.pdf  used on input line 4.
 (pdftex.def)             Requested size: 22.34538pt x 25.6073pt.
 
 
@@ -1537,7 +1500,24 @@ Package fancyhdr Warning: \footskip is too small (10.0pt):
 (fancyhdr)                Make it at least 11.68419pt, for example:
 (fancyhdr)                \setlength{\footskip}{11.68419pt}.
 
-[5 <./img/visualisierung.png>] (Weihnachtsprojekt_Denkinger_etAl.aux)
+[7]
+<img/visualisierung.png, id=128, 393.8715pt x 299.31825pt>
+File: img/visualisierung.png Graphic file (type png)
+<use img/visualisierung.png>
+Package pdftex.def Info: img/visualisierung.png  used on input line 12.
+(pdftex.def)             Requested size: 338.58632pt x 257.3219pt.
+)
+File: img/itmlogo.pdf Graphic file (type pdf)
+<use img/itmlogo.pdf>
+Package pdftex.def Info: img/itmlogo.pdf  used on input line 62.
+(pdftex.def)             Requested size: 22.34538pt x 25.6073pt.
+
+
+Package fancyhdr Warning: \footskip is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\footskip}{13.59999pt}.
+
+[8 <./img/visualisierung.png>] (Weihnachtsprojekt_Denkinger_etAl.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2020/03/25>
@@ -1546,34 +1526,21 @@ L3 programming layer <2020/03/25>
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `Weihnachtsprojekt_Denkinger_etAl.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Weihnachtsprojekt_Denkinger_etAl.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
- )
-(\end occurred inside a group at level 1)
-
-### simple group (level 1) entered at line 3 ({)
-### bottom level 
+Package rerunfilecheck Info: File `Weihnachtsprojekt_Denkinger_etAl.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+ ) 
 Here is how much of TeX's memory you used:
- 41043 strings out of 474495
- 951340 string characters out of 5743934
+ 41068 strings out of 474495
+ 952487 string characters out of 5743934
  2051460 words of memory out of 5000000
- 62537 multiletter control sequences out of 15000+600000
- 568917 words of font info for 75 fonts, out of 8000000 for 9000
+ 62551 multiletter control sequences out of 15000+600000
+ 568750 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 122i,18n,121p,11103b,1988s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm0900.pfb>
-Output written on Weihnachtsprojekt_Denkinger_etAl.pdf (5 pages, 263734 bytes).
+ 122i,18n,121p,11103b,1986s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm0900.pfb>
+Output written on Weihnachtsprojekt_Denkinger_etAl.pdf (8 pages, 318656 bytes).
 PDF statistics:
- 230 PDF objects out of 1000 (max. 8388607)
- 87 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 244 PDF objects out of 1000 (max. 8388607)
+ 86 named destinations out of 1000 (max. 500000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
