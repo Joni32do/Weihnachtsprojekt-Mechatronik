@@ -497,12 +497,12 @@ INPUT .\Trajektorie.png
 INPUT .\Trajektorie.png
 INPUT .\Trajektorie.png
 INPUT .\Trajektorie.png
-INPUT .\img\itmlogo.pdf
-INPUT .\img\itmlogo.pdf
-INPUT .\img\itmlogo.pdf
 INPUT .\A4_Simulation.tex
 INPUT .\A4_Simulation.tex
 INPUT A4_Simulation.tex
+INPUT .\img\itmlogo.pdf
+INPUT .\img\itmlogo.pdf
+INPUT .\img\itmlogo.pdf
 INPUT C:\Users\jonat\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr9.tfm
 INPUT C:\Users\jonat\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm0900.tfm
 INPUT C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex\latex\base\omscmr.fd

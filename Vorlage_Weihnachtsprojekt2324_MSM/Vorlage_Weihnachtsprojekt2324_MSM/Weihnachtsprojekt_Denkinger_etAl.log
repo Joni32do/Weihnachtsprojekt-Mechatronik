@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.12.21)  18 JAN 2024 22:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.12.21)  18 JAN 2024 22:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1443,10 +1443,10 @@ File: Trajektorie.png Graphic file (type png)
 <use Trajektorie.png>
 Package pdftex.def Info: Trajektorie.png  used on input line 66.
 (pdftex.def)             Requested size: 290.22107pt x 217.58545pt.
-)
+) (A4_Simulation.tex
 File: img/itmlogo.pdf Graphic file (type pdf)
 <use img/itmlogo.pdf>
-Package pdftex.def Info: img/itmlogo.pdf  used on input line 53.
+Package pdftex.def Info: img/itmlogo.pdf  used on input line 6.
 (pdftex.def)             Requested size: 22.34538pt x 25.6073pt.
 
 
@@ -1454,7 +1454,7 @@ Package fancyhdr Warning: \footskip is too small (10.0pt):
 (fancyhdr)                Make it at least 13.59999pt, for example:
 (fancyhdr)                \setlength{\footskip}{13.59999pt}.
 
-[4 <./Trajektorie.png (PNG copy)>] (A4_Simulation.tex
+[4 <./Trajektorie.png (PNG copy)>]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 9.
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 29.
  (C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
@@ -1470,7 +1470,7 @@ LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <9> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 39.
 File: img/itmlogo.pdf Graphic file (type pdf)
 <use img/itmlogo.pdf>
-Package pdftex.def Info: img/itmlogo.pdf  used on input line 43.
+Package pdftex.def Info: img/itmlogo.pdf  used on input line 50.
 (pdftex.def)             Requested size: 22.34538pt x 25.6073pt.
 
 
@@ -1481,7 +1481,7 @@ Package fancyhdr Warning: \footskip is too small (10.0pt):
 [5{C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]) (A5_PID-Regler.tex
 File: img/itmlogo.pdf Graphic file (type pdf)
 <use img/itmlogo.pdf>
-Package pdftex.def Info: img/itmlogo.pdf  used on input line 13.
+Package pdftex.def Info: img/itmlogo.pdf  used on input line 20.
 (pdftex.def)             Requested size: 22.34538pt x 25.6073pt.
 
 
@@ -1492,7 +1492,7 @@ Package fancyhdr Warning: \footskip is too small (10.0pt):
 [6]) (A6_Stoersignal.tex) (A7_Visualisierung.tex
 File: img/itmlogo.pdf Graphic file (type pdf)
 <use img/itmlogo.pdf>
-Package pdftex.def Info: img/itmlogo.pdf  used on input line 4.
+Package pdftex.def Info: img/itmlogo.pdf  used on input line 7.
 (pdftex.def)             Requested size: 22.34538pt x 25.6073pt.
 
 
@@ -1501,7 +1501,7 @@ Package fancyhdr Warning: \footskip is too small (10.0pt):
 (fancyhdr)                \setlength{\footskip}{11.68419pt}.
 
 [7]
-<img/visualisierung.png, id=128, 393.8715pt x 299.31825pt>
+<img/visualisierung.png, id=129, 393.8715pt x 299.31825pt>
 File: img/visualisierung.png Graphic file (type png)
 <use img/visualisierung.png>
 Package pdftex.def Info: img/visualisierung.png  used on input line 12.
@@ -1509,7 +1509,7 @@ Package pdftex.def Info: img/visualisierung.png  used on input line 12.
 )
 File: img/itmlogo.pdf Graphic file (type pdf)
 <use img/itmlogo.pdf>
-Package pdftex.def Info: img/itmlogo.pdf  used on input line 62.
+Package pdftex.def Info: img/itmlogo.pdf  used on input line 58.
 (pdftex.def)             Requested size: 22.34538pt x 25.6073pt.
 
 
@@ -1532,13 +1532,13 @@ Package rerunfilecheck Info: File `Weihnachtsprojekt_Denkinger_etAl.out' has not
 Here is how much of TeX's memory you used:
  41068 strings out of 474495
  952487 string characters out of 5743934
- 2051460 words of memory out of 5000000
+ 2086460 words of memory out of 5000000
  62551 multiletter control sequences out of 15000+600000
  568750 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  122i,18n,121p,11103b,1986s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm0900.pfb>
-Output written on Weihnachtsprojekt_Denkinger_etAl.pdf (8 pages, 318656 bytes).
+Output written on Weihnachtsprojekt_Denkinger_etAl.pdf (8 pages, 318711 bytes).
 PDF statistics:
  244 PDF objects out of 1000 (max. 8388607)
  86 named destinations out of 1000 (max. 500000)
