@@ -13,7 +13,7 @@ Um die Trajektorie zu planen, müssen zuerst die globalen Koordinaten in Gelenkw
 
 \begin{verbatim}
     pos_endeff = @(q) 4/25*[sin(q(1)) + 4/5*sin(q(1)+q(2)); ...
-    - cos(q(1)) - 4/5*cos(q(1)+q(2)); 0];
+                            - cos(q(1)) - 4/5*cos(q(1)+q(2)); 0];
     to_endeff = @(q) pos_endeff(q) - y_end_glob;
     q_0 = [y_0(1); y_0(3)];
     q_end = fsolve(to_endeff, q_0);
